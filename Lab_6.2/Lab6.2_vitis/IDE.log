@@ -1,0 +1,14 @@
+22:29:42 DEBUG : Logs will be stored at 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2_vitis/IDE.log'.
+22:29:46 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\timhs\OneDrive\Documents\Vivado\Lab_6.2\Lab6.2_vitis\temp_xsdb_launch_script.tcl
+22:29:46 INFO  : Platform repository initialization has completed.
+22:29:46 INFO  : Registering command handlers for Vitis TCF services
+22:29:52 INFO  : XSCT server has started successfully.
+22:29:52 INFO  : plnx-install-location is set to ''
+22:30:01 INFO  : Successfully done setting XSCT server connection channel  
+22:30:01 INFO  : Successfully done query RDI_DATADIR 
+22:30:01 INFO  : Successfully done setting workspace for the tool. 
+22:31:31 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+22:31:31 INFO  : Result from executing command 'getPlatforms': 
+22:31:31 WARN  : An unexpected exception occurred in the module 'platform project logging'
+22:31:32 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+22:31:35 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.

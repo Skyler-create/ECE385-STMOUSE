@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="mb_intro_acc" location="C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.1/Lab_6.1/Vitis/mb_intro_acc" platform="C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.1/Lab_6.1/Vitis/mb_intro_top_acc/export/mb_intro_top_acc/mb_intro_top_acc.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="mb_intro_acc_system" sysConfig="mb_intro_top_acc" runtime="cpp" cpu="standalone_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="c47fb7c07eceebbe4160d1085c4882f3">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1707330831">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1117032804" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

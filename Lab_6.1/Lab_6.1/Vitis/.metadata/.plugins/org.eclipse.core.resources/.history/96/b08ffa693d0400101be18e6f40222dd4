@@ -1,0 +1,54 @@
+//mb_blink.c
+//
+//Provided boilerplate "LED Blink" code for ECE 385
+//Modified with software debouncing for the accumulator button
+//
+
+#include <stdio.h>
+#include <xparameters.h>
+#include <xil_types.h>
+#include <sleep.h>
+
+#include "platform.h"
+
+volatile uint32_t* led_gpio_data = (uint32_t*)0x40000000;
+volatile uint32_t* switch_gpio_data = (uint32_t*)0x40010000;
+volatile uint32_t* accbtn_gpio_data = (uint32_t*)0x40020000;
+
+volatile uint32_t accumulator = 0;
+
+#define DEBOUNCE_DELAY_MS  50  // Adjust based on button behavior
+
+// Function to debounce the button
+int debounce_button() {
+    int stable_state = 0;
+    int count = 0;
+
+    while (count < 5) { // Ensure the button is stable for 5 consecutive reads
+        if (*accbtn_gpio_data == stable_state) {
+            count++;
+        } else {
+            count = 0;  // Reset counter if button state changes
+            stable_state = *accbtn_gpio_data;
+        }
+        usleep(DEBOUNCE_DELAY_MS * 1000);  // Wait before next read
+    }
+    return stable_state;
+}
+
+int main()
+{
+    init_platform();
+
+    while (1)
+    {
+        if (debounce_button()) { // Read button state with debouncing
+            accumulator += *switch_gpio_data;
+        }
+        *led_gpio_data = accumulator;
+    }
+
+    cleanup_platform();
+
+    return 0;
+}
