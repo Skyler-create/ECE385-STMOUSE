@@ -123,8 +123,8 @@ BYTE* MAXbytes_wr(BYTE reg, BYTE nbytes, BYTE* data) {
 
 /* Single host register read        */
 BYTE MAXreg_rd(BYTE reg) {
-	    BYTE SendBuf[1];  // Buffer to store the command byte
-	    BYTE RecvBuf[1];  // Buffer to store the received value
+	    BYTE SendBuf[2];  // Buffer to store the command byte
+	    BYTE RecvBuf[2];  // Buffer to store the received value
 
 	    // Select MAX3421E
 	    XSpi_SetSlaveSelect(&SpiInstance, 0x01);
@@ -151,7 +151,7 @@ BYTE MAXreg_rd(BYTE reg) {
 /* returns a pointer to a memory position after last read   */
 BYTE* MAXbytes_rd(BYTE reg, BYTE nbytes, BYTE* data) {
     BYTE SendBuf[nbytes+1];  // Buffer to store the command byte
-    BYTE RecvBuf[nbytes+1]];
+    BYTE RecvBuf[nbytes+1];
 	//psuedocode:
 	//select MAX3421E (may not be necessary if you are using SPI peripheral)
     XSpi_SetSlaveSelect(&SpiInstance, 0x01);
