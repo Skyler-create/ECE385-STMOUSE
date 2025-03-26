@@ -142,7 +142,7 @@ BYTE MAXreg_rd(BYTE reg) {
 	    }
 
 	    // Return the received register value
-	    return RecvBuf[1]; //USED TO BE 0
+	    return RecvBuf[1];
 }
 
 
