@@ -94,8 +94,8 @@ void MAXreg_wr(BYTE reg, BYTE val) {
 /* multiple-byte write */
 /* returns a pointer to a memory position after last written */
 BYTE* MAXbytes_wr(BYTE reg, BYTE nbytes, BYTE* data) {
-    BYTE sendBuffer[nbytes+1];
-    BYTE recvBuffer[nbytes+1];
+    BYTE sendBuffer[nbytes];
+    BYTE recvBuffer[nbytes];
 	//psuedocode:
 	//select MAX3421E (may not be necessary if you are using SPI peripheral)
     XSpi_SetSlaveSelect(&SpiInstance, MAX3421E_SELECT_MASK);
@@ -150,8 +150,8 @@ BYTE MAXreg_rd(BYTE reg) {
 /* multiple-bytes register read                             */
 /* returns a pointer to a memory position after last read   */
 BYTE* MAXbytes_rd(BYTE reg, BYTE nbytes, BYTE* data) {
-    BYTE SendBuf[nbytes+1];  // Buffer to store the command byte
-    BYTE RecvBuf[nbytes+1]];
+    BYTE SendBuf[nbytes];  // Buffer to store the command byte
+    BYTE RecvBuf[nbytes];
 	//psuedocode:
 	//select MAX3421E (may not be necessary if you are using SPI peripheral)
     XSpi_SetSlaveSelect(&SpiInstance, 0x01);
@@ -160,9 +160,6 @@ BYTE* MAXbytes_rd(BYTE reg, BYTE nbytes, BYTE* data) {
 	//read data[n] from SPI, where n goes from 0 to nbytes-1
     Status = XSpi_Transfer(&SpiInstance, SendBuf, RecvBuf, nbytes+1);
 	//read return code from SPI peripheral 
-    for (int i = 0; i < nbytes; i++) {
-    	data[i] = RecvBuf[i+1];
-    }
 	//if return code != 0 print an error
     if (Status != XST_SUCCESS) {
         xil_printf("Error: SPI Transfer failed!\n");
