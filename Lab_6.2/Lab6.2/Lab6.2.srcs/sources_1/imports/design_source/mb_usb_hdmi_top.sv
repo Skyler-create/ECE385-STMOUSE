@@ -50,6 +50,8 @@ module mb_usb_hdmi_top(
     logic reset_ah;
     
     assign reset_ah = reset_rtl_0;
+    assign keycode0_gpio = 32'h0;
+    assign keycode1_gpio = 32'h0;
     
     
     //Keycode HEX drivers

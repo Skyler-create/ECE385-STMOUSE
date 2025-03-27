@@ -68,18 +68,21 @@ BYTE SPI_wr(BYTE data) {
 /* Functions    */
 /* Single host register write   */
 void MAXreg_wr(BYTE reg, BYTE val) {
-    u8 sendBuffer[2];   // Buffer to send data via SPI
+    BYTE sendBuffer[2] = {reg + 2, val};  // Write command: reg + 2
+    BYTE recvBuffer[2] = {0};
 
     // Prepare data to send: reg + 2 (address with WRITE bit set)
-    sendBuffer[0] = reg + 2;
-    sendBuffer[1] = val;
+    xil_printf("e");
 
     // Select the MAX3421E (Slave Select)
     //IMPORTANT: SELECT MASK MAY BE DIFFERENT BASED ON ACTUAL
     XSpi_SetSlaveSelect(&SpiInstance, MAX3421E_SELECT_MASK);
+    xil_printf("e");
 
     // Perform SPI transfer
-    Status = XSpi_Transfer(&SpiInstance, sendBuffer, NULL, 2);  // NULL for receive buffer since we only send
+    Status = XSpi_Transfer(&SpiInstance, sendBuffer, recvBuffer, 2);  // NULL for receive buffer since we only send
+
+    xil_printf("f");
 
     // Check return code and handle errors
     if (Status != XST_SUCCESS) {
@@ -87,8 +90,11 @@ void MAXreg_wr(BYTE reg, BYTE val) {
     }
 
     // Deselect MAX3421E (if necessary; depends on SPI peripheral behavior)
-    XSpi_SetSlaveSelect(&SpiInstance, 0);
+    XSpi_SetSlaveSelect(&SpiInstance, 0x00);
+
+    xil_printf("Ephraimee");
 }
+
 
 
 /* multiple-byte write */
@@ -102,11 +108,11 @@ BYTE* MAXbytes_wr(BYTE reg, BYTE nbytes, BYTE* data) {
 	//write reg + 2 via SPI
     sendBuffer[0] = reg + 2;
 	//write data[n] via SPI, where n goes from 0 to nbytes-1
-    for(int i = 0; i < nbytes; n++) {
-    	sendBuffer[i+1] = data[n];
+    for(int i = 0; i < nbytes; i++) {
+    	sendBuffer[i+1] = data[i];
     }
     Status = XSpi_Transfer(&SpiInstance, sendBuffer, recvBuffer, nbytes + 1);
-	//read return code from SPI peripheral 
+	//read return code from SPI peripheral
 
 	//if return code != 0 print an error
     if (Status != XST_SUCCESS) {
@@ -159,7 +165,7 @@ BYTE* MAXbytes_rd(BYTE reg, BYTE nbytes, BYTE* data) {
     SendBuf[0] = reg & 0x7F;  // Ensure the R/W bit is set to 0
 	//read data[n] from SPI, where n goes from 0 to nbytes-1
     Status = XSpi_Transfer(&SpiInstance, SendBuf, RecvBuf, nbytes+1);
-	//read return code from SPI peripheral 
+	//read return code from SPI peripheral
     for (int i = 0; i < nbytes; i++) {
     	data[i] = RecvBuf[i+1];
     }
