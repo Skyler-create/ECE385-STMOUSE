@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1743048007">
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1743058334">
   <File Type="ROUTE-PWR" Name="mb_usb_hdmi_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="mb_usb_hdmi_top.tcl"/>
   <File Type="BITSTR-MMI" Name="mb_usb_hdmi_top.mmi"/>
@@ -135,6 +135,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/clk_60hz_divider.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/mb_block_wrapper.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -162,6 +170,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
