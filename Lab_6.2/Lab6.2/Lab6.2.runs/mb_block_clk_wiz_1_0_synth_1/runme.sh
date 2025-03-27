@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='H:/My Drive/UIUC/Year 2 S/ECE 385/Vivado/Lab6.1/Lab6.1.runs/mb_block_clk_wiz_1_0_synth_1'
+HD_PWD='C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.runs/mb_block_clk_wiz_1_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

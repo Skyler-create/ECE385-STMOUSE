@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Wed Mar 26 23:01:17 2025
+// Date        : Wed Mar 26 23:01:16 2025
 // Host        : Tims-Laptop running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ mb_block_clk_wiz_1_0_sim_netlist.v
 // Design      : mb_block_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +13,7 @@
 `timescale 1 ps / 1 ps
 
 (* NotValidForBitStream *)
-module mb_block_clk_wiz_1_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (clk_out1,
     reset,
     locked,
@@ -28,14 +28,14 @@ module mb_block_clk_wiz_1_0
   wire locked;
   wire reset;
 
-  mb_block_clk_wiz_1_0_clk_wiz inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_mb_block_clk_wiz_1_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .locked(locked),
         .reset(reset));
 endmodule
 
-module mb_block_clk_wiz_1_0_clk_wiz
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_mb_block_clk_wiz_1_0_clk_wiz
    (clk_out1,
     reset,
     locked,

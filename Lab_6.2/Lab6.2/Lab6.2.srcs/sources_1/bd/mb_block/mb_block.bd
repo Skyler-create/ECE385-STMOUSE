@@ -1248,6 +1248,21 @@
         "xci_path": "ip\\mb_block_clk_wiz_1_0\\mb_block_clk_wiz_1_0.xci",
         "inst_hier_path": "clk_wiz_1",
         "parameters": {
+          "CLKOUT2_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_USED": {
+            "value": "false"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "1"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "1"
+          },
           "PRIM_SOURCE": {
             "value": "Single_ended_clock_capable_pin"
           }

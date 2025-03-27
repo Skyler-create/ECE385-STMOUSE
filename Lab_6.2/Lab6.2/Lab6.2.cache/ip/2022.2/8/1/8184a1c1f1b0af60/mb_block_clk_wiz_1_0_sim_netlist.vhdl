@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Wed Mar 26 23:01:17 2025
+-- Date        : Wed Mar 26 23:01:16 2025
 -- Host        : Tims-Laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ mb_block_clk_wiz_1_0_sim_netlist.vhdl
 -- Design      : mb_block_clk_wiz_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,16 +14,16 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity mb_block_clk_wiz_1_0_clk_wiz is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_mb_block_clk_wiz_1_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end mb_block_clk_wiz_1_0_clk_wiz;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_mb_block_clk_wiz_1_0_clk_wiz;
 
-architecture STRUCTURE of mb_block_clk_wiz_1_0_clk_wiz is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_mb_block_clk_wiz_1_0_clk_wiz is
   signal clk_in1_mb_block_clk_wiz_1_0 : STD_LOGIC;
   signal clk_out1_mb_block_clk_wiz_1_0 : STD_LOGIC;
   signal clkfbout_buf_mb_block_clk_wiz_1_0 : STD_LOGIC;
@@ -166,7 +166,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity mb_block_clk_wiz_1_0 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     clk_out1 : out STD_LOGIC;
     reset : in STD_LOGIC;
@@ -174,12 +174,12 @@ entity mb_block_clk_wiz_1_0 is
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of mb_block_clk_wiz_1_0 : entity is true;
-end mb_block_clk_wiz_1_0;
+  attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture STRUCTURE of mb_block_clk_wiz_1_0 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 begin
-inst: entity work.mb_block_clk_wiz_1_0_clk_wiz
+inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_mb_block_clk_wiz_1_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,

@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Mar 17 11:11:09 2025
-# Process ID: 4944
-# Current directory: H:/My Drive/UIUC/Year 2 S/ECE 385/Vivado/Lab6.1/Lab6.1.runs/mb_block_clk_wiz_1_0_synth_1
+# Start of session at: Wed Mar 26 23:00:10 2025
+# Process ID: 34172
+# Current directory: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.runs/mb_block_clk_wiz_1_0_synth_1
 # Command line: vivado.exe -log mb_block_clk_wiz_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_block_clk_wiz_1_0.tcl
-# Log file: H:/My Drive/UIUC/Year 2 S/ECE 385/Vivado/Lab6.1/Lab6.1.runs/mb_block_clk_wiz_1_0_synth_1/mb_block_clk_wiz_1_0.vds
-# Journal file: H:/My Drive/UIUC/Year 2 S/ECE 385/Vivado/Lab6.1/Lab6.1.runs/mb_block_clk_wiz_1_0_synth_1\vivado.jou
+# Log file: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.runs/mb_block_clk_wiz_1_0_synth_1/mb_block_clk_wiz_1_0.vds
+# Journal file: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.runs/mb_block_clk_wiz_1_0_synth_1\vivado.jou
 # Running On: Tims-Laptop, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 4, Host memory: 16913 MB
 #-----------------------------------------------------------
 source mb_block_clk_wiz_1_0.tcl -notrace

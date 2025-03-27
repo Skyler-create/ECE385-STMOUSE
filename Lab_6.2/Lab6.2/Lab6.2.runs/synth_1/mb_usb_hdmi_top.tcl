@@ -71,8 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache C:/Users/timhs/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-41556-Tims-Laptop/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/timhs/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21932-Tims-Laptop/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -142,9 +141,9 @@ set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDriv
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.gen/sources_1/bd/mb_block/mb_block_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/data/mb_bootloop_le.elf]
 
-read_ip -quiet c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
+read_ip -quiet C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
 
-read_ip -quiet c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/Lab6.2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
