@@ -1,6 +1,6 @@
 Nothing to build in platform 'mb_usb_hdmi_top'
 
-21:52:49 **** Incremental Build of configuration Debug for project mb_usb_hdmi ****
+22:06:33 **** Incremental Build of configuration Debug for project mb_usb_hdmi ****
 make all 
 'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -28,22 +28,18 @@ C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2_vitis/mb_usb_hdmi_top/ex
 ../src/lw_usb/MAX3421E.c:34:6: note: declared here
    34 | void SPI_init() {
       |      ^~~~~~~~
+../src/lw_usb/MAX3421E.c: In function 'MAXbytes_rd':
+../src/lw_usb/MAX3421E.c:173:15: warning: returning 'int' from a function with return type 'BYTE *' {aka 'unsigned char *'} makes pointer from integer without a cast [-Wint-conversion]
+  173 |        return 0xFF;  // Return an error code
+      |               ^~~~
 ../src/lw_usb/MAX3421E.c: In function 'MAX3421E_Task':
-../src/lw_usb/MAX3421E.c:321:46: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
-  321 |         if (XGpio_DiscreteRead(&Gpio_int, 1) & 0x01 == 0) {
+../src/lw_usb/MAX3421E.c:319:46: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  319 |         if (XGpio_DiscreteRead(&Gpio_int, 1) & 0x01 == 0) {
       |                                              ^
 ../src/lw_usb/MAX3421E.c: In function 'MaxGpxHandler':
-../src/lw_usb/MAX3421E.c:357:14: warning: variable 'GPINIRQ' set but not used [-Wunused-but-set-variable]
-  357 |         BYTE GPINIRQ;
+../src/lw_usb/MAX3421E.c:355:14: warning: variable 'GPINIRQ' set but not used [-Wunused-but-set-variable]
+  355 |         BYTE GPINIRQ;
       |              ^~~~~~~
-../src/lw_usb/MAX3421E.c: In function 'MAXbytes_wr':
-../src/lw_usb/MAX3421E.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
-  128 | }
-      | ^
-../src/lw_usb/MAX3421E.c: In function 'MAXbytes_rd':
-../src/lw_usb/MAX3421E.c:181:1: warning: control reaches end of non-void function [-Wreturn-type]
-  181 | }
-      | ^
 'Finished building: ../src/lw_usb/MAX3421E.c'
 ' '
 'Building target: mb_usb_hdmi.elf'
@@ -54,9 +50,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/timhs/OneDrive/Documents/Vivado/L
 'Invoking: MicroBlaze Print Size'
 mb-size mb_usb_hdmi.elf  |tee "mb_usb_hdmi.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  22944	    488	   3672	  27104	   69e0	mb_usb_hdmi.elf
+  24032	    488	   3672	  28192	   6e20	mb_usb_hdmi.elf
 'Finished building: mb_usb_hdmi.elf.size'
 ' '
-21:52:51 **** Incremental Build of configuration Debug for project mb_usb_hdmi_system ****
+22:06:34 **** Incremental Build of configuration Debug for project mb_usb_hdmi_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

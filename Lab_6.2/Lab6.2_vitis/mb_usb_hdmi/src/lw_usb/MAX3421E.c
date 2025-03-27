@@ -72,17 +72,16 @@ void MAXreg_wr(BYTE reg, BYTE val) {
    BYTE recvBuffer[2] = {0};
 
    // Prepare data to send: reg + 2 (address with WRITE bit set)
-   xil_printf("e");
 
    // Select the MAX3421E (Slave Select)
    //IMPORTANT: SELECT MASK MAY BE DIFFERENT BASED ON ACTUAL
    XSpi_SetSlaveSelect(&SpiInstance, MAX3421E_SELECT_MASK);
-   xil_printf("e");
+
 
    // Perform SPI transfer
    Status = XSpi_Transfer(&SpiInstance, sendBuffer, recvBuffer, 2);  // NULL for receive buffer since we only send
 
-   xil_printf("f");
+
 
    // Check return code and handle errors
    if (Status != XST_SUCCESS) {
@@ -92,7 +91,6 @@ void MAXreg_wr(BYTE reg, BYTE val) {
    // Deselect MAX3421E (if necessary; depends on SPI peripheral behavior)
    XSpi_SetSlaveSelect(&SpiInstance, 0x00);
 
-   xil_printf("Ephraimee");
 }
 
 
@@ -100,31 +98,32 @@ void MAXreg_wr(BYTE reg, BYTE val) {
 /* multiple-byte write */
 /* returns a pointer to a memory position after last written */
 BYTE* MAXbytes_wr(BYTE reg, BYTE nbytes, BYTE* data) {
-//    BYTE sendBuffer[nbytes];
-//    BYTE recvBuffer[nbytes];
-//	//psuedocode:
-//	//select MAX3421E (may not be necessary if you are using SPI peripheral)
-//    XSpi_SetSlaveSelect(&SpiInstance, MAX3421E_SELECT_MASK);
-//	//write reg + 2 via SPI
-//    sendBuffer[0] = reg + 2;
-//	//write data[n] via SPI, where n goes from 0 to nbytes-1
-//    for(int i = 0; i < nbytes; i++) {
-//    	sendBuffer[i+1] = data[i];
-//    }
-//    Status = XSpi_Transfer(&SpiInstance, sendBuffer, recvBuffer, nbytes);
-//	//read return code from SPI peripheral
-//
-//	//if return code != 0 print an error
-//    if (Status != XST_SUCCESS) {
-//            xil_printf("SPI Transfer Failed with Status: %d\n", Status);
-//            // Optionally, deselect the device before returning in case of failure
-//            XSpi_SetSlaveSelect(&SpiInstance, 0x00);
-//            return NULL; // Indicate an error
-//    }
-//	//deselect MAX3421E (may not be necessary if you are using SPI peripheral)
-//            XSpi_SetSlaveSelect(&SpiInstance, 0x00);
-//	//return (data + nbytes);
-//            return (data + nbytes);
+   BYTE sendBuffer[nbytes+1];
+   BYTE recvBuffer[nbytes+1];
+	//psuedocode:
+	//select MAX3421E (may not be necessary if you are using SPI peripheral)
+   XSpi_SetSlaveSelect(&SpiInstance, MAX3421E_SELECT_MASK);
+	//write reg + 2 via SPI
+   sendBuffer[0] = reg + 2;
+	//write data[n] via SPI, where n goes from 0 to nbytes-1
+   for(int i = 0; i < nbytes; i++) {
+   	sendBuffer[i+1] = data[i];
+   }
+   Status = XSpi_Transfer(&SpiInstance, sendBuffer, recvBuffer, nbytes+1);
+	//read return code from SPI peripheral
+
+
+	//if return code != 0 print an error
+   if (Status != XST_SUCCESS) {
+           xil_printf("SPI Transfer Failed with Status: %d\n", Status);
+           // Optionally, deselect the device before returning in case of failure
+           XSpi_SetSlaveSelect(&SpiInstance, 0x00);
+           return NULL; // Indicate an error
+   }
+	//deselect MAX3421E (may not be necessary if you are using SPI peripheral)
+           XSpi_SetSlaveSelect(&SpiInstance, 0x00);
+	//return (data + nbytes);
+           return (data + nbytes);
 }
 
 /* Single host register read        */
@@ -136,7 +135,7 @@ BYTE MAXreg_rd(BYTE reg) {
 	    XSpi_SetSlaveSelect(&SpiInstance, 0x01);
 
 	    // Prepare the command byte for a read operation
-	    SendBuf[0] = reg & 0x7F;  // Ensure the R/W bit is set to 0
+	    SendBuf[0] = reg;  // Ensure the R/W bit is set to 0
 
 	    // Send the command byte and read the response
 	    Status = XSpi_Transfer(&SpiInstance, SendBuf, RecvBuf, 2);
@@ -146,7 +145,6 @@ BYTE MAXreg_rd(BYTE reg) {
 	        xil_printf("Error: SPI Transfer failed!\n");
 	        return 0xFF;  // Return an error code
 	    }
-		xil_printf("Oliver");
 	    // Return the received register value
 	    return RecvBuf[1]; //USED TO BE 0
 }
@@ -156,28 +154,28 @@ BYTE MAXreg_rd(BYTE reg) {
 /* multiple-bytes register read                             */
 /* returns a pointer to a memory position after last read   */
 BYTE* MAXbytes_rd(BYTE reg, BYTE nbytes, BYTE* data) {
-//    BYTE SendBuf[nbytes];  // Buffer to store the command byte
-//    BYTE RecvBuf[nbytes];
-//	//psuedocode:
-//	//select MAX3421E (may not be necessary if you are using SPI peripheral)
-//    XSpi_SetSlaveSelect(&SpiInstance, 0x01);
-//	//write reg via SPI
-//    SendBuf[0] = reg & 0x7F;  // Ensure the R/W bit is set to 0
-//	//read data[n] from SPI, where n goes from 0 to nbytes-1
-//    Status = XSpi_Transfer(&SpiInstance, SendBuf, RecvBuf, nbytes);
-//	//read return code from SPI peripheral
-//    for (int i = 0; i < nbytes; i++) {
-//    	data[i] = RecvBuf[i+1];
-//    }
-//	//if return code != 0 print an error
-//    if (Status != XST_SUCCESS) {
-//        xil_printf("Error: SPI Transfer failed!\n");
-//        return 0xFF;  // Return an error code
-//    }
-//	//deselect MAX3421E (may not be necessary if you are using SPI peripheral)
-//    XSpi_SetSlaveSelect(&SpiInstance, 0x00);
-//	//return (data + nbytes);
-//    return (data+nbytes);
+   BYTE SendBuf[nbytes+1];  // Buffer to store the command byte
+   BYTE RecvBuf[nbytes+1];
+	//psuedocode:
+	//select MAX3421E (may not be necessary if you are using SPI peripheral)
+   XSpi_SetSlaveSelect(&SpiInstance, 0x01);
+	//write reg via SPI
+   SendBuf[0] = reg;  // Ensure the R/W bit is set to 0
+	//read data[n] from SPI, where n goes from 0 to nbytes-1
+   Status = XSpi_Transfer(&SpiInstance, SendBuf, RecvBuf, nbytes+1);
+	//read return code from SPI peripheral
+   for (int i = 0; i < nbytes; i++) {
+   	data[i] = RecvBuf[i+1];
+   }
+	//if return code != 0 print an error
+   if (Status != XST_SUCCESS) {
+       xil_printf("Error: SPI Transfer failed!\n");
+       return 0xFF;  // Return an error code
+   }
+	//deselect MAX3421E (may not be necessary if you are using SPI peripheral)
+   XSpi_SetSlaveSelect(&SpiInstance, 0x00);
+	//return (data + nbytes);
+   return (data+nbytes);
 }
 
 
