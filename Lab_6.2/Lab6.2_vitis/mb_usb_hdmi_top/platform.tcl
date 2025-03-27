@@ -28,3 +28,5 @@ platform active {mb_usb_hdmi_top}
 platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/mb_usb_hdmi_top.xsa}
 platform generate -domains 
 platform generate
+platform generate
+platform generate
