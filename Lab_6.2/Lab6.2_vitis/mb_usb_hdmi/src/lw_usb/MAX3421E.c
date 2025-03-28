@@ -136,7 +136,7 @@ BYTE MAXreg_rd(BYTE reg) {
 
 	    // Prepare the command byte for a read operation
 	    SendBuf[0] = reg;  // Ensure the R/W bit is set to 0
-
+	    RecvBuf[0] = reg;
 	    // Send the command byte and read the response
 	    Status = XSpi_Transfer(&SpiInstance, SendBuf, RecvBuf, 2);
 
@@ -161,6 +161,7 @@ BYTE* MAXbytes_rd(BYTE reg, BYTE nbytes, BYTE* data) {
    XSpi_SetSlaveSelect(&SpiInstance, 0x01);
 	//write reg via SPI
    SendBuf[0] = reg;  // Ensure the R/W bit is set to 0
+   RecvBuf[0] = reg;
 	//read data[n] from SPI, where n goes from 0 to nbytes-1
    Status = XSpi_Transfer(&SpiInstance, SendBuf, RecvBuf, nbytes+1);
 	//read return code from SPI peripheral

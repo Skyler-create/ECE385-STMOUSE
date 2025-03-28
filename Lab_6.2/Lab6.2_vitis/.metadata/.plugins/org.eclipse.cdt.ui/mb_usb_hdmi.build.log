@@ -1,6 +1,6 @@
-19:50:41 **** Incremental Build of configuration Debug for project mb_usb_hdmi ****
+21:46:37 **** Incremental Build of configuration Debug for project mb_usb_hdmi ****
 make all 
 make: Nothing to be done for 'all'.
 
-19:50:41 Build Finished (took 172ms)
+21:46:37 Build Finished (took 189ms)
 
