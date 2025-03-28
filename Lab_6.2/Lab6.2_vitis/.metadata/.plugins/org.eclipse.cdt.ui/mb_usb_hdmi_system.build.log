@@ -1,6 +1,6 @@
-01:36:20 **** Incremental Build of configuration Debug for project mb_usb_hdmi_system ****
+19:50:42 **** Incremental Build of configuration Debug for project mb_usb_hdmi_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-01:36:20 Build Finished (took 101ms)
+19:50:42 Build Finished (took 196ms)
 

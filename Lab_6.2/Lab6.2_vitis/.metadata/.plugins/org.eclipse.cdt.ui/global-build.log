@@ -1,6 +1,37 @@
-01:36:09 **** Incremental Build of project mb_usb_hdmi_top ****
-buildplatform.bat 57603 mb_usb_hdmi_top no_domain_build 
-XSDB Server Channel: tcfchan#8
+19:49:59 **** Clean-only build of project mb_usb_hdmi_top ****
+buildplatform.bat 57603 mb_usb_hdmi_top clean 
+XSDB Server Channel: tcfchan#30
+Cleaning the BSP for domain  - standalone_microblaze_0
+make -C microblaze_0/libsrc/bram_v4_8/src -s clean 
+
+make -C microblaze_0/libsrc/cpu_v2_16/src -s clean 
+
+make -C microblaze_0/libsrc/gpio_v4_9/src -s clean 
+
+make -C microblaze_0/libsrc/intc_v3_15/src -s clean 
+
+make -C microblaze_0/libsrc/spi_v4_9/src -s clean 
+
+make -C microblaze_0/libsrc/standalone_v8_0/src -s clean 
+
+make -C microblaze_0/libsrc/tmrctr_v4_9/src -s clean 
+
+make -C microblaze_0/libsrc/uartlite_v3_7/src -s clean 
+
+rm -f microblaze_0/lib/libxil.a
+
+19:50:04 **** Clean-only build of configuration Debug for project mb_usb_hdmi ****
+make clean 
+rm -rf  ./src/lw_usb/HID.o ./src/lw_usb/MAX3421E.o ./src/lw_usb/transfer.o  ./src/lw_usb_main.o ./src/platform.o  ./src/lw_usb/HID.d ./src/lw_usb/MAX3421E.d ./src/lw_usb/transfer.d  ./src/lw_usb_main.d ./src/platform.d  mb_usb_hdmi.elf.size  mb_usb_hdmi.elf
+' '
+19:50:04 **** Clean-only build of configuration Debug for project mb_usb_hdmi_system ****
+make clean 
+rm -rf ./_sds
+rm -rf package
+rm -f system.bif
+19:50:11 **** Build of project mb_usb_hdmi_top ****
+buildplatform.bat 57603 mb_usb_hdmi_top  
+XSDB Server Channel: tcfchan#31
 C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 make --no-print-directory seq_libs
@@ -41,11 +72,11 @@ PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-
 
 "Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
 
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
+
 make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
 OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EX
 TRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
 
 make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
 LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
@@ -144,8 +175,17 @@ xuartlite_stats.o
 mb-ar: creating microblaze_0/lib/libxil.a
 'Finished building libraries'
 
-01:36:18 **** Incremental Build of configuration Debug for project mb_usb_hdmi ****
+19:50:24 **** Build of configuration Debug for project mb_usb_hdmi ****
 make all 
+'Building file: ../src/lw_usb/HID.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/HID.o" -IC:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/HID.d" -MT"src/lw_usb/HID.o" -o "src/lw_usb/HID.o" "../src/lw_usb/HID.c"
+../src/lw_usb/HID.c:9:1: warning: braces around scalar initializer
+    9 | HID_DEVICE hid_device = { { 0 } };
+      | ^~~~~~~~~~
+../src/lw_usb/HID.c:9:1: note: (near initialization for 'hid_device.addr')
+'Finished building: ../src/lw_usb/HID.c'
+' '
 'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/MAX3421E.o" -IC:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/sw/mb_usb_hdmi_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/MAX3421E.d" -MT"src/lw_usb/MAX3421E.o" -o "src/lw_usb/MAX3421E.o" "../src/lw_usb/MAX3421E.c"
@@ -223,6 +263,14 @@ mb-size mb_usb_hdmi.elf  |tee "mb_usb_hdmi.elf.size"
   24032	    488	   3672	  28192	   6e20	mb_usb_hdmi.elf
 'Finished building: mb_usb_hdmi.elf.size'
 ' '
-01:36:20 **** Incremental Build of configuration Debug for project mb_usb_hdmi_system ****
+19:50:28 **** Build of configuration Debug for project mb_usb_hdmi_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+Nothing to build in platform 'mb_usb_hdmi_top'
+
+19:50:41 **** Incremental Build of configuration Debug for project mb_usb_hdmi ****
+make all 
+make: Nothing to be done for 'all'.
+19:50:42 **** Incremental Build of configuration Debug for project mb_usb_hdmi_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

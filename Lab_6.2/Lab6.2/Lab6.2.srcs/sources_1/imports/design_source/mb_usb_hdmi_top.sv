@@ -42,7 +42,6 @@ module mb_usb_hdmi_top(
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
-    logic clk_60Hz_ahhhhh;
     logic locked;
     logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig;
 
@@ -50,9 +49,9 @@ module mb_usb_hdmi_top(
     logic [3:0] red, green, blue;
     logic reset_ah;
     
-//    assign reset_ah = ~reset_rtl_0;
-    // assign keycode0_gpio = 32'h0;
-    // assign keycode1_gpio = 32'h0;
+    assign reset_ah = reset_rtl_0;
+    assign keycode0_gpio = 32'h0000;
+    assign keycode1_gpio = 32'h0000;
     
     
     //Keycode HEX drivers
@@ -75,8 +74,8 @@ module mb_usb_hdmi_top(
     mb_block mb_block_i (
         .clk_100MHz(Clk),
         .gpio_usb_int_tri_i(gpio_usb_int_tri_i),
-        .gpio_usb_keycode_0_tri_o(keycode0_gpio), 
-        .gpio_usb_keycode_1_tri_o(keycode1_gpio), 
+        .gpio_usb_keycode_0_tri_o(keycode0_gpio),
+        .gpio_usb_keycode_1_tri_o(keycode1_gpio),
         .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
         .reset_rtl_0(~reset_ah), //Block designs expect active low reset, all other modules are active high
         .uart_rtl_0_rxd(uart_rtl_0_rxd),
@@ -86,8 +85,7 @@ module mb_usb_hdmi_top(
         .usb_spi_sclk(usb_spi_sclk),
         .usb_spi_ss(usb_spi_ss)
     );
-
-       
+        
     //clock wizard configured with a 1x and 5x clock for HDMI
     clk_wiz_0 clk_wiz (
         .clk_out1(clk_25MHz),
@@ -115,7 +113,7 @@ module mb_usb_hdmi_top(
         .pix_clkx5(clk_125MHz),
         .pix_clk_locked(locked),
         //Reset is active LOW
-        .rst(~reset_ah), //Changed
+        .rst(reset_ah),
         //Color and Sync Signals
         .red(red),
         .green(green),
@@ -141,7 +139,7 @@ module mb_usb_hdmi_top(
     //Ball Module
     ball ball_instance(
         .Reset(reset_ah),
-        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
+        .frame_clk(vsync),               //Figure out what this should be so that the ball will move
         .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
         .BallX(ballxsig),
         .BallY(ballysig),
