@@ -91,3 +91,18 @@ platform generate
 platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/mb_usb_hdmi_top.xsa}
 platform clean
 platform generate
+platform clean
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform clean
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/mb_usb_hdmi_top.xsa}
+platform generate
+platform clean
+platform generate
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_6.2/Lab6.2/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
