@@ -13,7 +13,7 @@ module hdmi_text_controller_v1_0 #
     // Modify parameters as necessary for access of full VRAM range
 
     parameter integer C_AXI_DATA_WIDTH	= 32,
-    parameter integer C_AXI_ADDR_WIDTH	= 4 
+    parameter integer C_AXI_ADDR_WIDTH	= 12
 )
 (
     // Users to add ports here
@@ -99,7 +99,7 @@ assign reset_ah = axi_aresetn;
 clk_wiz_0 clk_wiz (
     .clk_out1(clk_25MHz),
     .clk_out2(clk_125MHz),
-    .reset(reset_ah),
+    .reset(~reset_ah),
     .locked(locked),
     .clk_in1(axi_aclk)
 );
@@ -107,7 +107,7 @@ clk_wiz_0 clk_wiz (
     
 vga_controller vga (
     .pixel_clk(clk_25MHz),
-    .reset(reset_ah),
+    .reset(~reset_ah),
     .hs(hsync),
     .vs(vsync),
     .active_nblank(vde),
@@ -121,7 +121,7 @@ hdmi_tx_0 vga_to_hdmi (
     .pix_clkx5(clk_125MHz),
     .pix_clk_locked(locked),
     //Reset is active LOW
-    .rst(reset_ah),
+    .rst(~reset_ah),
     //Color and Sync Signals
     .red(red),
     .green(green),
@@ -143,7 +143,18 @@ hdmi_tx_0 vga_to_hdmi (
     .TMDS_DATA_N(hdmi_tmds_data_n)          
 );
 
+color_mapper color_instance(
+    .BallX(ballxsig),
+    .BallY(ballysig),
+    .DrawX(drawX),
+    .DrawY(drawY),
+    .Ball_size(ballsizesig),
+    .Red(red),
+    .Green(green),
+    .Blue(blue)
+);
+
 
 // User logic ends
-
+//fuck
 endmodule

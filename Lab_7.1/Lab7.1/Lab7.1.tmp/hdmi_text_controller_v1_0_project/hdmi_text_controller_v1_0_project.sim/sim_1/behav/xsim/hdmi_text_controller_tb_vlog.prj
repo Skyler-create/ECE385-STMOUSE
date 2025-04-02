@@ -9,6 +9,7 @@ verilog xil_defaultlib  --include "../../../../hdmi_text_controller_v1_0_project
 "../../../../hdmi_text_controller_v1_0_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 
 sv xil_defaultlib  --include "../../../../hdmi_text_controller_v1_0_project.gen/sources_1/ip/clk_wiz_0" \
+"../../../../hdmi_text_controller_v1_0_project.srcs/sources_1/imports/design_source/Color_Mapper.sv" \
 "../../../../../../../ip_repo/hdmi_text_controller_1_0/src/VGA_controller.sv" \
 "../../../../../../../ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv" \
 "../../../../../../../ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_AXI.sv" \

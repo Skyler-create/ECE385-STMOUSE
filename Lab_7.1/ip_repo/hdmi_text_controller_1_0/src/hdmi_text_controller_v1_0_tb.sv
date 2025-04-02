@@ -9,7 +9,7 @@
 //Used for simulation of AXI4-Lite bus as well as generating
 //simulation video image for testing
 
-//`define SIM_VIDEO //Comment out to simulate AXI bus only
+ `define SIM_VIDEO //Comment out to simulate AXI bus only
                     //Uncomment to simulate entire screen and write BMP (slow)
 
 module hdmi_text_controller_tb();
@@ -105,25 +105,25 @@ module hdmi_text_controller_tb();
     end
 
     //Uncomment and fill in the following with your own hierarchical reference (e.g. internal signals) 
-    //so that the testbench can properly reflect the pixels being draw. 
+    //so that the testbench can properly reflect the pixels being drawn. 
     //Note that looking at the HDMI signal is not particularly useful here, as it is difficult
     //to decode. E.g. if your hdmi_text_controller has an internal signal named 'clk_25MHz' for
     //the pixel clock, assign pixel_clk = hdmi_text_controller_v1_0_inst.clk_25MHz
     
     // Red Green and Blue values respectively - these come from your draw logic
-    // assign pixel_rgb[0] = 
-    // assign pixel_rgb[1] =
-    // assign pixel_rgb[2] = 
+    assign pixel_rgb[0] = hdmi_text_controller_v1_0_inst.red;
+    assign pixel_rgb[1] = hdmi_text_controller_v1_0_inst.green;
+    assign pixel_rgb[2] = hdmi_text_controller_v1_0_inst.blue;
     
     // Pixel clock, hs, vs, and vde (!blank) - these come from your internal VGA module
-    // assign pixel_clk = 
-    // assign pixel_hs = 
-    // assign pixel_vs = 
-    // assign pixel_vde = 
+    assign pixel_clk = hdmi_text_controller_v1_0_inst.clk_25MHz;
+    assign pixel_hs = hdmi_text_controller_v1_0_inst.hsync;
+    assign pixel_vs = hdmi_text_controller_v1_0_inst.vsync;
+    assign pixel_vde = hdmi_text_controller_v1_0_inst.vde;
     
     // DrawX and DrawY - these come from your internal VGA module
-    // assign drawX = 
-    // assign drawY =
+    assign drawX = hdmi_text_controller_v1_0_inst.drawX;
+    assign drawY = hdmi_text_controller_v1_0_inst.drawY;
    
     // BMP writing task, based off work from @BrianHGinc:
     // https://github.com/BrianHGinc/SystemVerilog-TestBench-BPM-picture-generator
@@ -228,6 +228,32 @@ module hdmi_text_controller_tb();
     //Note the read handshake process is simpler than the write
     task axi_read (input logic [31:0] addr, output logic [31:0] data);
         begin
+
+            #3 read_addr <= addr;
+            read_data_ready <= 1'b1;
+            read_addr_valid <= 1'b1;
+
+
+            wait(read_addr_ready);
+
+            @(posedge aclk); 
+            if(read_addr_valid && read_addr_ready)//received both ready signals
+            begin
+                read_addr_ready <= 1'b0;
+                read_addr_valid <= 1'b0;
+            end
+            
+            wait(read_data_valid);
+            if(read_data_ready && read_data_valid)
+            begin
+                @(posedge aclk); 
+                data <= read_data;
+                // read_data_ready <= 1'b0;
+                read_data_valid <= 1'b0;
+            end
+                
+        
+
         end
     endtask;
   
