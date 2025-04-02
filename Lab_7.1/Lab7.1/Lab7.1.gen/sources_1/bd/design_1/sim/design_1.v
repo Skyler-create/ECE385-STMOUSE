@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Mon Mar 31 22:12:25 2025
+//Date        : Tue Apr  1 11:58:24 2025
 //Host        : Tims-Laptop running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,24 +9,34 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=7,da_mb_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=8,da_mb_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
-   (diff_clock_rtl_0_clk_n,
-    diff_clock_rtl_0_clk_p,
+   (HDMI_0_tmds_clk_n,
+    HDMI_0_tmds_clk_p,
+    HDMI_0_tmds_data_n,
+    HDMI_0_tmds_data_p,
+    clk_100MHz,
     reset_rtl_0,
     uart_rtl_0_rxd,
     uart_rtl_0_txd);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clock_rtl_0 CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME diff_clock_rtl_0, CAN_DEBUG false, FREQ_HZ 100000000" *) input diff_clock_rtl_0_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 diff_clock_rtl_0 CLK_P" *) input diff_clock_rtl_0_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_N" *) output HDMI_0_tmds_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_CLK_P" *) output HDMI_0_tmds_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_N" *) output [2:0]HDMI_0_tmds_data_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 HDMI_0 TMDS_DATA_P" *) output [2:0]HDMI_0_tmds_data_p;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN design_1_clk_100MHz, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 RxD" *) input uart_rtl_0_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl_0 TxD" *) output uart_rtl_0_txd;
 
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
+  wire axi_uartlite_0_interrupt;
+  wire clk_100MHz_1;
   wire clk_wiz_1_locked;
-  wire diff_clock_rtl_0_1_CLK_N;
-  wire diff_clock_rtl_0_1_CLK_P;
+  wire hdmi_text_controller_0_HDMI_TMDS_CLK_N;
+  wire hdmi_text_controller_0_HDMI_TMDS_CLK_P;
+  wire [2:0]hdmi_text_controller_0_HDMI_TMDS_DATA_N;
+  wire [2:0]hdmi_text_controller_0_HDMI_TMDS_DATA_P;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_axi_dp_ARADDR;
@@ -137,13 +147,17 @@ module design_1
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
 
+  assign HDMI_0_tmds_clk_n = hdmi_text_controller_0_HDMI_TMDS_CLK_N;
+  assign HDMI_0_tmds_clk_p = hdmi_text_controller_0_HDMI_TMDS_CLK_P;
+  assign HDMI_0_tmds_data_n[2:0] = hdmi_text_controller_0_HDMI_TMDS_DATA_N;
+  assign HDMI_0_tmds_data_p[2:0] = hdmi_text_controller_0_HDMI_TMDS_DATA_P;
   assign axi_uartlite_0_UART_RxD = uart_rtl_0_rxd;
-  assign diff_clock_rtl_0_1_CLK_N = diff_clock_rtl_0_clk_n;
-  assign diff_clock_rtl_0_1_CLK_P = diff_clock_rtl_0_clk_p;
+  assign clk_100MHz_1 = clk_100MHz;
   assign reset_rtl_0_1 = reset_rtl_0;
   assign uart_rtl_0_txd = axi_uartlite_0_UART_TxD;
   design_1_axi_uartlite_0_0 axi_uartlite_0
-       (.rx(axi_uartlite_0_UART_RxD),
+       (.interrupt(axi_uartlite_0_interrupt),
+        .rx(axi_uartlite_0_UART_RxD),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M01_AXI_ARADDR[3:0]),
         .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
@@ -165,8 +179,7 @@ module design_1
         .s_axi_wvalid(microblaze_0_axi_periph_M01_AXI_WVALID),
         .tx(axi_uartlite_0_UART_TxD));
   design_1_clk_wiz_1_1 clk_wiz_1
-       (.clk_in1_n(diff_clock_rtl_0_1_CLK_N),
-        .clk_in1_p(diff_clock_rtl_0_1_CLK_P),
+       (.clk_in1(clk_100MHz_1),
         .clk_out1(microblaze_0_Clk),
         .locked(clk_wiz_1_locked),
         .reset(mdm_1_debug_sys_rst));
@@ -191,7 +204,11 @@ module design_1
         .axi_wdata(microblaze_0_axi_periph_M02_AXI_WDATA),
         .axi_wready(microblaze_0_axi_periph_M02_AXI_WREADY),
         .axi_wstrb(microblaze_0_axi_periph_M02_AXI_WSTRB),
-        .axi_wvalid(microblaze_0_axi_periph_M02_AXI_WVALID));
+        .axi_wvalid(microblaze_0_axi_periph_M02_AXI_WVALID),
+        .hdmi_clk_n(hdmi_text_controller_0_HDMI_TMDS_CLK_N),
+        .hdmi_clk_p(hdmi_text_controller_0_HDMI_TMDS_CLK_P),
+        .hdmi_tx_n(hdmi_text_controller_0_HDMI_TMDS_DATA_N),
+        .hdmi_tx_p(hdmi_text_controller_0_HDMI_TMDS_DATA_P));
   design_1_mdm_1_1 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),
@@ -260,7 +277,7 @@ module design_1
         .Write_Strobe(microblaze_0_dlmb_1_WRITESTROBE));
   design_1_microblaze_0_axi_intc_1 microblaze_0_axi_intc
        (.interrupt_address(microblaze_0_interrupt_ADDRESS),
-        .intr(1'b0),
+        .intr(axi_uartlite_0_interrupt),
         .irq(microblaze_0_interrupt_INTERRUPT),
         .processor_ack({microblaze_0_interrupt_ACK[0],microblaze_0_interrupt_ACK[1]}),
         .processor_clk(microblaze_0_Clk),

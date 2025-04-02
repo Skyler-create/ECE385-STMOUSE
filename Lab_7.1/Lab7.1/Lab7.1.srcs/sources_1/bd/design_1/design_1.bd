@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE66DC96A6F399543",
+      "boundary_crc": "0x1E7B06161D73E184",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../Lab7.1.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2"
+      "tool_version": "2022.2",
+      "validated": "true"
     },
     "design_tree": {
       "axi_uartlite_0": "",
@@ -48,30 +49,6 @@
           }
         }
       },
-      "diff_clock_rtl_0": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
-        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
-        "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000"
-          }
-        },
-        "port_maps": {
-          "CLK_N": {
-            "physical_name": "diff_clock_rtl_0_clk_n",
-            "direction": "I"
-          },
-          "CLK_P": {
-            "physical_name": "diff_clock_rtl_0_clk_p",
-            "direction": "I"
-          }
-        }
-      },
       "HDMI_0": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:hdmi:2.0",
@@ -83,11 +60,15 @@
           },
           "TMDS_DATA_N": {
             "physical_name": "HDMI_0_tmds_data_n",
-            "direction": "O"
+            "direction": "O",
+            "left": "2",
+            "right": "0"
           },
           "TMDS_DATA_P": {
             "physical_name": "HDMI_0_tmds_data_p",
-            "direction": "O"
+            "direction": "O",
+            "left": "2",
+            "right": "0"
           },
           "TMDS_CLK_P": {
             "physical_name": "HDMI_0_tmds_clk_p",
@@ -101,8 +82,37 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "clk_100MHz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_100MHz",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       }
@@ -821,7 +831,7 @@
         "inst_hier_path": "clk_wiz_1",
         "parameters": {
           "PRIM_SOURCE": {
-            "value": "Differential_clock_capable_pin"
+            "value": "Single_ended_clock_capable_pin"
           }
         }
       },
@@ -843,12 +853,6 @@
         "interface_ports": [
           "uart_rtl_0",
           "axi_uartlite_0/UART"
-        ]
-      },
-      "diff_clock_rtl_0_1": {
-        "interface_ports": [
-          "diff_clock_rtl_0",
-          "clk_wiz_1/CLK_IN1_D"
         ]
       },
       "hdmi_text_controller_0_HDMI": {
@@ -907,6 +911,18 @@
       }
     },
     "nets": {
+      "axi_uartlite_0_interrupt": {
+        "ports": [
+          "axi_uartlite_0/interrupt",
+          "microblaze_0_axi_intc/intr"
+        ]
+      },
+      "clk_100MHz_1": {
+        "ports": [
+          "clk_100MHz",
+          "clk_wiz_1/clk_in1"
+        ]
+      },
       "clk_wiz_1_locked": {
         "ports": [
           "clk_wiz_1/locked",

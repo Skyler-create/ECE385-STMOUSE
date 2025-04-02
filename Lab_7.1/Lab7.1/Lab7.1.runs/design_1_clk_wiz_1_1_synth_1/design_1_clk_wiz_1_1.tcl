@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_clk_wiz_1_1_synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -91,7 +91,7 @@ set_property ip_output_repo c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1.xci
+read_ip -quiet C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1.xci
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1_ooc.xdc]

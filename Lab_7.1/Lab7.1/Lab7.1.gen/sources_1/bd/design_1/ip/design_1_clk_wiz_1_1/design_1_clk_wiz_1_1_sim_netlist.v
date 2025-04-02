@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Mar 31 22:15:52 2025
+// Date        : Tue Apr  1 11:59:32 2025
 // Host        : Tims-Laptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1_sim_netlist.v
@@ -17,23 +17,19 @@ module design_1_clk_wiz_1_1
    (clk_out1,
     reset,
     locked,
-    clk_in1_p,
-    clk_in1_n);
+    clk_in1);
   output clk_out1;
   input reset;
   output locked;
-  input clk_in1_p;
-  input clk_in1_n;
+  input clk_in1;
 
-  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) wire clk_in1_n;
-  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) wire clk_in1_p;
+  (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
   wire locked;
   wire reset;
 
   design_1_clk_wiz_1_1_clk_wiz inst
-       (.clk_in1_n(clk_in1_n),
-        .clk_in1_p(clk_in1_p),
+       (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .locked(locked),
         .reset(reset));
@@ -43,17 +39,14 @@ module design_1_clk_wiz_1_1_clk_wiz
    (clk_out1,
     reset,
     locked,
-    clk_in1_p,
-    clk_in1_n);
+    clk_in1);
   output clk_out1;
   input reset;
   output locked;
-  input clk_in1_p;
-  input clk_in1_n;
+  input clk_in1;
 
+  wire clk_in1;
   wire clk_in1_design_1_clk_wiz_1_1;
-  wire clk_in1_n;
-  wire clk_in1_p;
   wire clk_out1;
   wire clk_out1_design_1_clk_wiz_1_1;
   wire clkfbout_buf_design_1_clk_wiz_1_1;
@@ -85,13 +78,11 @@ module design_1_clk_wiz_1_1_clk_wiz
   (* CAPACITANCE = "DONT_CARE" *) 
   (* IBUF_DELAY_VALUE = "0" *) 
   (* IFD_DELAY_VALUE = "AUTO" *) 
-  IBUFDS #(
-    .CCIO_EN_M("TRUE"),
-    .CCIO_EN_S("TRUE"),
+  IBUF #(
+    .CCIO_EN("TRUE"),
     .IOSTANDARD("DEFAULT")) 
-    clkin1_ibufgds
-       (.I(clk_in1_p),
-        .IB(clk_in1_n),
+    clkin1_ibufg
+       (.I(clk_in1),
         .O(clk_in1_design_1_clk_wiz_1_1));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf

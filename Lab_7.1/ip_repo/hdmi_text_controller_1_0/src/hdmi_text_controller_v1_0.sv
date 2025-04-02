@@ -86,6 +86,64 @@ hdmi_text_controller_v1_0_AXI # (
 //top-level from the previous lab. You should get the IP to generate a valid HDMI signal (e.g. blue screen or gradient)
 //prior to working on the text drawing.
 
+logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
+logic locked;
+logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig;
+
+logic hsync, vsync, vde;
+logic [3:0] red, green, blue;
+logic reset_ah;
+
+assign reset_ah = axi_aresetn;
+
+clk_wiz_0 clk_wiz (
+    .clk_out1(clk_25MHz),
+    .clk_out2(clk_125MHz),
+    .reset(reset_ah),
+    .locked(locked),
+    .clk_in1(axi_aclk)
+);
+
+    
+vga_controller vga (
+    .pixel_clk(clk_25MHz),
+    .reset(reset_ah),
+    .hs(hsync),
+    .vs(vsync),
+    .active_nblank(vde),
+    .drawX(drawX),
+    .drawY(drawY)
+);    
+
+hdmi_tx_0 vga_to_hdmi (
+    //Clocking and Reset
+    .pix_clk(clk_25MHz),
+    .pix_clkx5(clk_125MHz),
+    .pix_clk_locked(locked),
+    //Reset is active LOW
+    .rst(reset_ah),
+    //Color and Sync Signals
+    .red(red),
+    .green(green),
+    .blue(blue),
+    .hsync(hsync),
+    .vsync(vsync),
+    .vde(vde),
+    
+    //aux Data (unused)
+    .aux0_din(4'b0),
+    .aux1_din(4'b0),
+    .aux2_din(4'b0),
+    .ade(1'b0),
+    
+    //Differential outputs
+    .TMDS_CLK_P(hdmi_tmds_clk_p),          
+    .TMDS_CLK_N(hdmi_tmds_clk_n),          
+    .TMDS_DATA_P(hdmi_tmds_data_p),         
+    .TMDS_DATA_N(hdmi_tmds_data_n)          
+);
+
+
 // User logic ends
 
 endmodule

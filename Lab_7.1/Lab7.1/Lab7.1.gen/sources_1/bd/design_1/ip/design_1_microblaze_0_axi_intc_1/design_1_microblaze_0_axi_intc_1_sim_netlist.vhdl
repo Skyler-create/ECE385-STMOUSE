@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Mon Mar 31 22:15:57 2025
+-- Date        : Tue Apr  1 11:59:40 2025
 -- Host        : Tims-Laptop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_1/design_1_microblaze_0_axi_intc_1_sim_netlist.vhdl
@@ -2765,6 +2765,7 @@ entity design_1_microblaze_0_axi_intc_1_intc_core is
     Douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     interrupt_address : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_aclk : in STD_LOGIC;
+    intr : in STD_LOGIC_VECTOR ( 0 to 0 );
     \REG_GEN[0].IMR_FAST_MODE_GEN.imr_reg[0]_0\ : in STD_LOGIC;
     \SIE_GEN.SIE_BIT_GEN[0].sie_reg[0]_0\ : in STD_LOGIC;
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]_0\ : in STD_LOGIC;
@@ -2778,7 +2779,6 @@ entity design_1_microblaze_0_axi_intc_1_intc_core is
     \REG_GEN[0].IAR_FAST_MODE_GEN.iar_reg[0]_0\ : in STD_LOGIC;
     p_18_in : in STD_LOGIC;
     p_16_in : in STD_LOGIC;
-    intr : in STD_LOGIC_VECTOR ( 0 to 0 );
     bus2ip_wrce : in STD_LOGIC_VECTOR ( 0 to 0 );
     bus2ip_addr_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
@@ -2788,9 +2788,6 @@ end design_1_microblaze_0_axi_intc_1_intc_core;
 
 architecture STRUCTURE of design_1_microblaze_0_axi_intc_1_intc_core is
   signal \ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.first_ack_active_i_1_n_0\ : STD_LOGIC;
-  signal \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\ : STD_LOGIC_VECTOR ( 0 to 1 );
-  attribute async_reg : string;
-  attribute async_reg of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\ : signal is "true";
   signal \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\ : STD_LOGIC;
   signal \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\ : STD_LOGIC;
   signal \IPR_GEN.ipr[0]_i_1_n_0\ : STD_LOGIC;
@@ -2839,12 +2836,6 @@ architecture STRUCTURE of design_1_microblaze_0_axi_intc_1_intc_core is
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.current_state_reg[0]\ : label is "gen_level_irq:01,wait_ack:10,idle:00";
   attribute FSM_ENCODED_STATES of \FSM_sequential_IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.current_state_reg[1]\ : label is "gen_level_irq:01,wait_ack:10,idle:00";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
-  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.Irq_i_2\ : label is "soft_lutpair37";
   attribute SOFT_HLUTNM of \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.idle_and_irq_d1_i_1\ : label is "soft_lutpair38";
   attribute SOFT_HLUTNM of \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_sample_en_i_1\ : label is "soft_lutpair38";
@@ -2984,35 +2975,13 @@ begin
       Q => \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.current_state\(1),
       R => \^s_axi_aresetn_0\
     );
-\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => intr(0),
-      Q => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(0),
-      R => '0'
-    );
-\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(0),
-      Q => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(1),
-      R => '0'
-    );
 \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0000AE00"
     )
         port map (
       I0 => hw_intr,
-      I1 => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(1),
+      I1 => intr(0),
       I2 => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\,
       I3 => s_axi_aresetn,
       I4 => \REG_GEN[0].IAR_FAST_MODE_GEN.iar_reg_n_0_[0]\,
@@ -3030,7 +2999,7 @@ begin
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff\(1),
+      D => intr(0),
       Q => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1\,
       R => \^s_axi_aresetn_0\
     );
@@ -4630,7 +4599,7 @@ entity design_1_microblaze_0_axi_intc_1_axi_intc is
   attribute C_ADDR_WIDTH : integer;
   attribute C_ADDR_WIDTH of design_1_microblaze_0_axi_intc_1_axi_intc : entity is 32;
   attribute C_ASYNC_INTR : string;
-  attribute C_ASYNC_INTR of design_1_microblaze_0_axi_intc_1_axi_intc : entity is "32'b11111111111111111111111111111111";
+  attribute C_ASYNC_INTR of design_1_microblaze_0_axi_intc_1_axi_intc : entity is "32'b11111111111111111111111111111110";
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of design_1_microblaze_0_axi_intc_1_axi_intc : entity is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;
@@ -4919,7 +4888,7 @@ architecture STRUCTURE of design_1_microblaze_0_axi_intc_1 is
   attribute C_ADDR_WIDTH : integer;
   attribute C_ADDR_WIDTH of U0 : label is 32;
   attribute C_ASYNC_INTR : string;
-  attribute C_ASYNC_INTR of U0 : label is "32'b11111111111111111111111111111111";
+  attribute C_ASYNC_INTR of U0 : label is "32'b11111111111111111111111111111110";
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of U0 : label is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;
@@ -4985,11 +4954,11 @@ architecture STRUCTURE of design_1_microblaze_0_axi_intc_1 is
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of irq : signal is "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LOW_LATENCY 1";
   attribute x_interface_info of processor_clk : signal is "xilinx.com:signal:clock:1.0 proc_clock CLK";
-  attribute x_interface_parameter of processor_clk : signal is "XIL_INTERFACENAME proc_clock, ASSOCIATED_BUSIF interrupt, ASSOCIATED_RESET processor_rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_1_clk_out1, INSERT_VIP 0";
+  attribute x_interface_parameter of processor_clk : signal is "XIL_INTERFACENAME proc_clock, ASSOCIATED_BUSIF interrupt, ASSOCIATED_RESET processor_rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0";
   attribute x_interface_info of processor_rst : signal is "xilinx.com:signal:reset:1.0 proc_reset RST";
   attribute x_interface_parameter of processor_rst : signal is "XIL_INTERFACENAME proc_reset, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 s_axi_aclk CLK";
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_1_clk_out1, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 s_resetn RST";
   attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME s_resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 s_axi ARREADY";
@@ -5004,11 +4973,11 @@ architecture STRUCTURE of design_1_microblaze_0_axi_intc_1 is
   attribute x_interface_info of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 s_axi WVALID";
   attribute x_interface_info of interrupt_address : signal is "xilinx.com:interface:mbinterrupt:1.0 interrupt ADDRESS";
   attribute x_interface_info of intr : signal is "xilinx.com:signal:interrupt:1.0 interrupt_input INTERRUPT";
-  attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH, PORTWIDTH 1";
+  attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY EDGE_RISING, PORTWIDTH 1";
   attribute x_interface_info of processor_ack : signal is "xilinx.com:interface:mbinterrupt:1.0 interrupt ACK";
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 s_axi ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 s_axi AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 s_axi BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 s_axi RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 s_axi RRESP";

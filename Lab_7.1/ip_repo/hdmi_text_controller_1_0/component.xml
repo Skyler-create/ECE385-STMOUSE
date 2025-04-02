@@ -402,6 +402,15 @@
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>hdmi_text_controller_tb</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+      </spirit:view>
     </spirit:views>
     <spirit:ports>
       <spirit:port>
@@ -870,6 +879,16 @@
         <spirit:fileType>tclSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/hdmi_text_controller_v1_0_tb.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
   </spirit:fileSets>
   <spirit:description>HDMI text controller for ECE 385</spirit:description>
   <spirit:parameters>
@@ -938,7 +957,7 @@
       </xilinx:taxonomies>
       <xilinx:displayName>hdmi_text_controller_v1.0</xilinx:displayName>
       <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-04-01T03:11:13Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-04-02T02:20:00Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>

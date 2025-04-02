@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Apr  1 12:13:58 2025
+# Process ID: 22616
+# Current directory: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.runs/synth_1
+# Command line: vivado.exe -log mb_usb_hdmi_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_usb_hdmi_top.tcl
+# Log file: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.runs/synth_1/mb_usb_hdmi_top.vds
+# Journal file: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.runs/synth_1\vivado.jou
+# Running On: Tims-Laptop, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 4, Host memory: 16913 MB
+#-----------------------------------------------------------
+source mb_usb_hdmi_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 382.109 ; gain = 64.344
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/ip_repo/hdmi_text_controller_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: synth_design -top mb_usb_hdmi_top -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22072
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+ERROR: [Synth 8-2716] syntax error near ')' [C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/ip_repo/hdmi_text_controller_1_0/src/mb_usb_hdmi_top.sv:28]
+INFO: [Synth 8-9084] Verilog file 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/ip_repo/hdmi_text_controller_1_0/src/mb_usb_hdmi_top.sv' ignored due to errors
+Failed to read verilog 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/ip_repo/hdmi_text_controller_1_0/src/mb_usb_hdmi_top.sv'
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  1 12:14:18 2025...
