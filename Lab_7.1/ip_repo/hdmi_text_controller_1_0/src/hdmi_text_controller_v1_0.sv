@@ -80,17 +80,9 @@ hdmi_text_controller_v1_0_AXI # (
     .S_AXI_RVALID(axi_rvalid),
     .S_AXI_RREADY(axi_rready),
     .INDEX(index), //index from row and column
-    .VRAM_DATA(vram_data)
+    .VRAM_DATA(vram_data),
+    .RGB_REG(rgb_reg)
 );
-
-logic [31:0] vram_data;
-logic [7:0] index;
-logic [6:0] column;
-logic [4:0] row;
-assign column = DrawX / 8;
-assign row = DrawY / 16;
-assign index = row * 80 + column
-
 
 
 //Instiante clocking wizard, VGA sync generator modules, and VGA-HDMI IP here. For a hint, refer to the provided
@@ -132,7 +124,7 @@ hdmi_tx_0 vga_to_hdmi (
     .pix_clkx5(clk_125MHz),
     .pix_clk_locked(locked),
     //Reset is active LOW
-    .rst(reset_ah),
+    .rst(~reset_ah),
     //Color and Sync Signals
     .red(red),
     .green(green),
@@ -154,17 +146,6 @@ hdmi_tx_0 vga_to_hdmi (
     .TMDS_DATA_N(hdmi_tmds_data_n)          
 );
 
-color_mapper color_instance(
-    .BallX(ballxsig),
-    .BallY(ballysig),
-    .DrawX(drawX),
-    .DrawY(drawY),
-    .Ball_size(ballsizesig),
-    .Red(red),
-    .Green(green),
-    .Blue(blue)
-);
-
 //PROCESS
 /*
 FOR DRAWING ONE PIXEL
@@ -174,12 +155,10 @@ FOR DRAWING ONE PIXEL
 **TB HELPS LOOP THROUGH THE ALL THE PIXELS AND DRAWING ALL OF THEM 
 */
 
-logic [10:0] rom_addr1;
-logic [10:0] rom_addr2;
-
-logic [7:0] rom_data;
-
-
+logic [10:0] rom_addr;
+logic [31:0] rgb_reg;
+logic [7:0] D;
+logic [2:0] FR;
 //assign rom_addr
 //axi_rdata: Data read from registers <- goes into 
 //axi_araddr: Tells us where on the screen we are at
@@ -187,33 +166,94 @@ logic [7:0] rom_data;
 
 //Row = ADDR(d) * 4 / 80
 //Col = ADDR(d) * 4 % 80
-assign rom_data1 = vram_data [6:0] //left most on printed right most on 
-assign rom_data2 = vram_data [14:8];
-assign rom_data2 = vram_data [22:16];
-assign rom_data2 = vram_data [30:24];
 
-assign rom_addr = {rom_data1[6:0], row};
+
+logic [31:0] vram_data;
+logic [9:0] index;
+logic [6:0] column;
+logic [4:0] row;
+logic [7:0] rom_data;
+assign column = drawX / 32;
+assign row = drawY / 16;
+assign index = row * 20 + column;
+
 
 //11-bit address (First 7-bits CODEn, Next 4 says which row)
 //IF DATA IS NOT 0, THEN DO SHIT
+assign D = drawX % 8;
+assign FR = rom_data[7 - D];
+logic invbit;
+logic [1:0] q;
+logic [3:0] Y;
+assign Y = drawY % 16;
+assign q = (drawX % 32) /8 ;
+always_comb
+//make back to always comb later
+begin
+    if(q == 0)
+    begin
+        rom_addr = {vram_data[6:0], Y};
+        invbit = vram_data[7];
+    end
 
-font_rom1 font_rom (
-    .addr(rom_addr), 
-    .data(rom_data) //8-bit output of the row
-)
+    else if(q == 1)
+    begin
+        rom_addr = {vram_data[14:8], Y};
+        invbit = vram_data[15];
 
-font_rom2 font_rom (
+    end
+
+    else if(q == 2)
+    begin
+        rom_addr = {vram_data[22:16], Y};
+        invbit = vram_data[23];
+    end
+
+    else if(q == 3)
+    begin
+        rom_addr = {vram_data[30:24], Y};
+        invbit = vram_data[31];
+    end
+
+    if(FR == 1)
+    begin
+        if(invbit == 0)
+        begin
+            red = rgb_reg [24:21];
+            green = rgb_reg [20:17];
+            blue = rgb_reg [16:13];
+        end
+        else if(invbit== 1)
+        begin
+            red = rgb_reg [12:9];
+            green = rgb_reg [8:5];
+            blue = rgb_reg [4:1];
+        end
+    end
+    else if(FR == 0)
+    begin
+        if(invbit == 0)
+        begin
+            red = rgb_reg [12:9];
+            green = rgb_reg [8:5];
+            blue = rgb_reg [4:1];
+        end
+        else if(invbit ==  1)
+        begin
+            red = rgb_reg [24:21];
+            green = rgb_reg [20:17];
+            blue = rgb_reg [16:13];
+        end
+    end
+end
+
+
+
+font_rom font_rom1 (
     .addr(rom_addr), 
     .data(rom_data) //8-bit output of the row
-)
-font_rom3 font_rom (
-    .addr(rom_addr), 
-    .data(rom_data) //8-bit output of the row
-)
-font_rom4 font_rom (
-    .addr(rom_addr), 
-    .data(rom_data) //8-bit output of the row
-)
+);
+
 
 // User logic ends
 endmodule

@@ -1,6 +1,5 @@
 module font_rom ( input [10:0]	addr,
-				  output [7:0]	data
-					 );
+		  output [7:0]	data );
 
 	parameter ADDR_WIDTH = 11;
 	parameter DATA_WIDTH =  8;

@@ -101,8 +101,9 @@ module hdmi_text_controller_v1_0_AXI #
     // Read ready. This signal indicates that the master can
         // accept the read data and response information.
     input logic  S_AXI_RREADY,
-    input logic [7:0] INDEX,
-    output logic [31：0] VRAM_DATA
+    input logic [9:0] INDEX,
+    output logic [31:0] VRAM_DATA,
+    output logic [31:0] RGB_REG
 );
 
 // AXI4LITE signals
@@ -155,6 +156,7 @@ assign S_AXI_RDATA	= axi_rdata;
 assign S_AXI_RRESP	= axi_rresp;
 assign S_AXI_RVALID	= axi_rvalid;
 assign VRAM_DATA = slv_regs[INDEX];
+assign RGB_REG = slv_regs[600];
 // Implement axi_awready generation
 // axi_awready is asserted for one S_AXI_ACLK clock cycle when both
 // S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
