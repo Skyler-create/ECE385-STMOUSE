@@ -31,14 +31,14 @@ module hdmi_text_controller_v1_0 #
     input logic  axi_aclk,
     input logic  axi_aresetn,
     input logic [C_AXI_ADDR_WIDTH-1 : 0] axi_awaddr,
-    input logic [2 : 0] axi_awprot,
-    input logic  axi_awvalid,
-    output logic  axi_awready,
+    input logic [2 : 0] axi_awprot, 
+    input logic  axi_awvalid, 
+    output logic  axi_awready, 
     input logic [C_AXI_DATA_WIDTH-1 : 0] axi_wdata,
     input logic [(C_AXI_DATA_WIDTH/8)-1 : 0] axi_wstrb,
     input logic  axi_wvalid,
     output logic  axi_wready,
-    output logic [1 : 0] axi_bresp,
+    output logic [1 : 0] axi_bresp, 
     output logic  axi_bvalid,
     input logic  axi_bready,
     input logic [C_AXI_ADDR_WIDTH-1 : 0] axi_araddr,
@@ -78,8 +78,19 @@ hdmi_text_controller_v1_0_AXI # (
     .S_AXI_RDATA(axi_rdata),
     .S_AXI_RRESP(axi_rresp),
     .S_AXI_RVALID(axi_rvalid),
-    .S_AXI_RREADY(axi_rready)
+    .S_AXI_RREADY(axi_rready),
+    .INDEX(index), //index from row and column
+    .VRAM_DATA(vram_data)
 );
+
+logic [31:0] vram_data;
+logic [7:0] index;
+logic [6:0] column;
+logic [4:0] row;
+assign column = DrawX / 8;
+assign row = DrawY / 16;
+assign index = row * 80 + column
+
 
 
 //Instiante clocking wizard, VGA sync generator modules, and VGA-HDMI IP here. For a hint, refer to the provided
@@ -121,7 +132,7 @@ hdmi_tx_0 vga_to_hdmi (
     .pix_clkx5(clk_125MHz),
     .pix_clk_locked(locked),
     //Reset is active LOW
-    .rst(~reset_ah),
+    .rst(reset_ah),
     //Color and Sync Signals
     .red(red),
     .green(green),
@@ -154,7 +165,55 @@ color_mapper color_instance(
     .Blue(blue)
 );
 
+//PROCESS
+/*
+FOR DRAWING ONE PIXEL
+1. TAKE THE READ ADDRESS & DATA THROUGH AXI
+2. MAKE NECESSARY CALCULATIONS TO FIND CORRECT ROW IN FONT_ROM
+3. DRAW FONT_ROM BY CALLING SETTING THE RGB ARRAYS (WHICH GETS TO VGA MODULE) AND LETTING TB DRAW
+**TB HELPS LOOP THROUGH THE ALL THE PIXELS AND DRAWING ALL OF THEM 
+*/
+
+logic [10:0] rom_addr1;
+logic [10:0] rom_addr2;
+
+logic [7:0] rom_data;
+
+
+//assign rom_addr
+//axi_rdata: Data read from registers <- goes into 
+//axi_araddr: Tells us where on the screen we are at
+//slv_regs[i]: Should be analogous to axi_araddr
+
+//Row = ADDR(d) * 4 / 80
+//Col = ADDR(d) * 4 % 80
+assign rom_data1 = vram_data [6:0] //left most on printed right most on 
+assign rom_data2 = vram_data [14:8];
+assign rom_data2 = vram_data [22:16];
+assign rom_data2 = vram_data [30:24];
+
+assign rom_addr = {rom_data1[6:0], row};
+
+//11-bit address (First 7-bits CODEn, Next 4 says which row)
+//IF DATA IS NOT 0, THEN DO SHIT
+
+font_rom1 font_rom (
+    .addr(rom_addr), 
+    .data(rom_data) //8-bit output of the row
+)
+
+font_rom2 font_rom (
+    .addr(rom_addr), 
+    .data(rom_data) //8-bit output of the row
+)
+font_rom3 font_rom (
+    .addr(rom_addr), 
+    .data(rom_data) //8-bit output of the row
+)
+font_rom4 font_rom (
+    .addr(rom_addr), 
+    .data(rom_data) //8-bit output of the row
+)
 
 // User logic ends
-//fuck
 endmodule
