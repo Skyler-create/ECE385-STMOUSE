@@ -85,13 +85,16 @@ set_property parent.project_path C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/ip_repo/hdmi_text_controller_1_0 [current_project]
+set_property ip_repo_paths {
+  c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/ip_repo/hdmi_text_controller_1_0
+  c:/Users/timhs/OneDrive/Documents/Vivado/RD_hdmi_ip2020
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_1/design_1_microblaze_0_1.xci
+read_ip -quiet C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_1/design_1_microblaze_0_1.xci
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_1/design_1_microblaze_0_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_1/design_1_microblaze_0_1_ooc_debug.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_1/design_1_microblaze_0_1_ooc.xdc]

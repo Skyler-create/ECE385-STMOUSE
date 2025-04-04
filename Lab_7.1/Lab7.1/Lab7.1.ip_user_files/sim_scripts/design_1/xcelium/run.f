@@ -5,11 +5,6 @@
 -makelib xcelium_lib/xpm \
   "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
--makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/design_1/ipshared/0ea6/src/hdmi_text_controller_v1_0_AXI.sv" \
-  "../../../bd/design_1/ipshared/0ea6/src/hdmi_text_controller_v1_0.sv" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_1/sim/design_1_hdmi_text_controller_0_1.sv" \
--endlib
 -makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
   "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 -endlib
@@ -102,6 +97,22 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_rst_clk_wiz_1_100M_1/sim/design_1_rst_clk_wiz_1_100M_1.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdl/encode.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdl/serdes_10_to_1.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdl/srldelay.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdl/hdmi_tx_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/sim/hdmi_tx_0.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0_clk_wiz.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib -sv \
+  "../../../bd/design_1/ipshared/6ff4/src/VGA_controller.sv" \
+  "../../../bd/design_1/ipshared/6ff4/src/font_rom.sv" \
+  "../../../bd/design_1/ipshared/6ff4/src/hdmi_text_controller_v1_0_AXI.sv" \
+  "../../../bd/design_1/ipshared/6ff4/src/hdmi_text_controller_v1_0.sv" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/sim/design_1_hdmi_text_controller_0_2.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/sim/design_1.v" \

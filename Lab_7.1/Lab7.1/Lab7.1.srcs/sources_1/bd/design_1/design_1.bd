@@ -843,8 +843,8 @@
       },
       "hdmi_text_controller_0": {
         "vlnv": "xilinx.com:user:hdmi_text_controller:1.0",
-        "xci_name": "design_1_hdmi_text_controller_0_1",
-        "xci_path": "ip\\design_1_hdmi_text_controller_0_1\\design_1_hdmi_text_controller_0_1.xci",
+        "xci_name": "design_1_hdmi_text_controller_0_2",
+        "xci_path": "ip\\design_1_hdmi_text_controller_0_2\\design_1_hdmi_text_controller_0_2.xci",
         "inst_hier_path": "hdmi_text_controller_0"
       }
     },

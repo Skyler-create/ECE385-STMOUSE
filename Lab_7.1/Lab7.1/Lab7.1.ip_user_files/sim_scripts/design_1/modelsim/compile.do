@@ -2,12 +2,12 @@ vlib modelsim_lib/work
 vlib modelsim_lib/msim
 
 vlib modelsim_lib/msim/xpm
-vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/axi_lite_ipif_v3_0_4
 vlib modelsim_lib/msim/lib_pkg_v1_0_2
 vlib modelsim_lib/msim/lib_srl_fifo_v1_0_2
 vlib modelsim_lib/msim/lib_cdc_v1_0_2
 vlib modelsim_lib/msim/axi_uartlite_v2_0_31
+vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/microblaze_v11_0_10
 vlib modelsim_lib/msim/lmb_v10_v3_0_12
 vlib modelsim_lib/msim/lmb_bram_if_cntlr_v4_0_21
@@ -23,12 +23,12 @@ vlib modelsim_lib/msim/mdm_v3_2_23
 vlib modelsim_lib/msim/proc_sys_reset_v5_0_13
 
 vmap xpm modelsim_lib/msim/xpm
-vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap axi_lite_ipif_v3_0_4 modelsim_lib/msim/axi_lite_ipif_v3_0_4
 vmap lib_pkg_v1_0_2 modelsim_lib/msim/lib_pkg_v1_0_2
 vmap lib_srl_fifo_v1_0_2 modelsim_lib/msim/lib_srl_fifo_v1_0_2
 vmap lib_cdc_v1_0_2 modelsim_lib/msim/lib_cdc_v1_0_2
 vmap axi_uartlite_v2_0_31 modelsim_lib/msim/axi_uartlite_v2_0_31
+vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap microblaze_v11_0_10 modelsim_lib/msim/microblaze_v11_0_10
 vmap lmb_v10_v3_0_12 modelsim_lib/msim/lmb_v10_v3_0_12
 vmap lmb_bram_if_cntlr_v4_0_21 modelsim_lib/msim/lmb_bram_if_cntlr_v4_0_21
@@ -43,17 +43,12 @@ vmap axi_intc_v4_1_17 modelsim_lib/msim/axi_intc_v4_1_17
 vmap mdm_v3_2_23 modelsim_lib/msim/mdm_v3_2_23
 vmap proc_sys_reset_v5_0_13 modelsim_lib/msim/proc_sys_reset_v5_0_13
 
-vlog -work xpm  -incr -mfcu  -sv "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work xpm  -incr -mfcu  -sv "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm  -93  \
 "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
-
-vlog -work xil_defaultlib  -incr -mfcu  -sv "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
-"../../../bd/design_1/ipshared/0ea6/src/hdmi_text_controller_v1_0_AXI.sv" \
-"../../../bd/design_1/ipshared/0ea6/src/hdmi_text_controller_v1_0.sv" \
-"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_1/sim/design_1_hdmi_text_controller_0_1.sv" \
 
 vcom -work axi_lite_ipif_v3_0_4  -93  \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
@@ -93,37 +88,37 @@ vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_dlmb_bram_if_cntlr_1/sim/design_1_dlmb_bram_if_cntlr_1.vhd" \
 "../../../bd/design_1/ip/design_1_ilmb_bram_if_cntlr_1/sim/design_1_ilmb_bram_if_cntlr_1.vhd" \
 
-vlog -work blk_mem_gen_v8_4_5  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work blk_mem_gen_v8_4_5  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/25a8/simulation/blk_mem_gen_v8_4.v" \
 
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../bd/design_1/ip/design_1_lmb_bram_1/sim/design_1_lmb_bram_1.v" \
 
-vlog -work generic_baseblocks_v2_1_0  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work generic_baseblocks_v2_1_0  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
-vlog -work axi_infrastructure_v1_1_0  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work axi_infrastructure_v1_1_0  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 
-vlog -work axi_register_slice_v2_1_27  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work axi_register_slice_v2_1_27  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
-vlog -work fifo_generator_v13_2_7  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work fifo_generator_v13_2_7  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/83df/simulation/fifo_generator_vlog_beh.v" \
 
 vcom -work fifo_generator_v13_2_7  -93  \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/83df/hdl/fifo_generator_v13_2_rfs.vhd" \
 
-vlog -work fifo_generator_v13_2_7  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work fifo_generator_v13_2_7  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/83df/hdl/fifo_generator_v13_2_rfs.v" \
 
-vlog -work axi_data_fifo_v2_1_26  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work axi_data_fifo_v2_1_26  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/3111/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 
-vlog -work axi_crossbar_v2_1_28  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work axi_crossbar_v2_1_28  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/c40e/hdl/axi_crossbar_v2_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
 
 vcom -work axi_intc_v4_1_17  -93  \
@@ -138,7 +133,7 @@ vcom -work mdm_v3_2_23  -93  \
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_mdm_1_1/sim/design_1_mdm_1_1.vhd" \
 
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1.v" \
 
@@ -148,7 +143,23 @@ vcom -work proc_sys_reset_v5_0_13  -93  \
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_rst_clk_wiz_1_100M_1/sim/design_1_rst_clk_wiz_1_100M_1.vhd" \
 
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" \
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
+"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdl/encode.v" \
+"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdl/serdes_10_to_1.v" \
+"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdl/srldelay.v" \
+"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdl/hdmi_tx_v1_0.v" \
+"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/sim/hdmi_tx_0.v" \
+"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0_clk_wiz.v" \
+"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  -sv "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
+"../../../bd/design_1/ipshared/6ff4/src/VGA_controller.sv" \
+"../../../bd/design_1/ipshared/6ff4/src/font_rom.sv" \
+"../../../bd/design_1/ipshared/6ff4/src/hdmi_text_controller_v1_0_AXI.sv" \
+"../../../bd/design_1/ipshared/6ff4/src/hdmi_text_controller_v1_0.sv" \
+"../../../bd/design_1/ip/design_1_hdmi_text_controller_0_2/sim/design_1_hdmi_text_controller_0_2.sv" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1" \
 "../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \
