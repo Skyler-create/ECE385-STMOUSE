@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Info: Read back of control register: 001f6000
+Time: 192360 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial262_905  Scope: hdmi_text_controller_tb.TEST_VECTORS  File: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv Line: 288
+INFO: xsimkernel Simulation Memory Usage: 69964 KB (Peak: 69964 KB), Simulation CPU Usage: 86828 ms

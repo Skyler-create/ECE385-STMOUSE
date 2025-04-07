@@ -4,27 +4,33 @@
 # IP: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.srcs/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/design_1_hdmi_text_controller_0_2.xci
 # IP: The module: 'design_1_hdmi_text_controller_0_2' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# IP: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdmi_tx_0.xci
+# IP: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_2/hdmi_tx_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_0 || ORIG_REF_NAME==hdmi_tx_0} -quiet] -quiet
 
-# IP: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0.xci
+# IP: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] -quiet
 
-# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0.xdc
+# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0_ooc.xdc
+# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0_late.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0_ooc.xdc
 
 # IP: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.srcs/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/design_1_hdmi_text_controller_0_2.xci
 # IP: The module: 'design_1_hdmi_text_controller_0_2' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# IP: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_1/hdmi_tx_0.xci
+# IP: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/hdmi_tx_0_2/hdmi_tx_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hdmi_tx_0 || ORIG_REF_NAME==hdmi_tx_0} -quiet] -quiet
 
-# IP: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0.xci
+# IP: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] -quiet
 
-# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0.xdc
+# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0_ooc.xdc
+# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0_late.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0_ooc.xdc

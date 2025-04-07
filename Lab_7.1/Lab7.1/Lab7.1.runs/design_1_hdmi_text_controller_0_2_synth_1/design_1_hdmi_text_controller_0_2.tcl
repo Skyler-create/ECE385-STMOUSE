@@ -70,12 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_hdmi_text_controller_0_2_synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 2
 set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL-1065} -limit 10000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
@@ -99,8 +94,9 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_ip -quiet C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.srcs/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/design_1_hdmi_text_controller_0_2.xci
-set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_1/clk_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0_late.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.1/Lab7.1/Lab7.1.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_2/src/clk_wiz_0_3/clk_wiz_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

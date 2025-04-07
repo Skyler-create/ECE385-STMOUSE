@@ -1,0 +1,150 @@
+
+*** Running vivado
+    with args -log design_1_hdmi_text_controller_0_3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_hdmi_text_controller_0_3.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_hdmi_text_controller_0_3.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 383.012 ; gain = 45.695
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/timhs/OneDrive/Documents/Vivado/RD_hdmi_ip2020'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_hdmi_text_controller_0_3
+Command: synth_design -top design_1_hdmi_text_controller_0_3 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14240
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'index', assumed default net type 'wire' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:84]
+INFO: [Synth 8-11241] undeclared symbol 'vram_data', assumed default net type 'wire' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:85]
+INFO: [Synth 8-11241] undeclared symbol 'rgb_reg', assumed default net type 'wire' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:86]
+INFO: [Synth 8-11241] undeclared symbol 'hdmi_tmds_clk_p', assumed default net type 'wire' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:145]
+INFO: [Synth 8-11241] undeclared symbol 'hdmi_tmds_clk_n', assumed default net type 'wire' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:146]
+INFO: [Synth 8-11241] undeclared symbol 'hdmi_tmds_data_p', assumed default net type 'wire' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:147]
+INFO: [Synth 8-11241] undeclared symbol 'hdmi_tmds_data_n', assumed default net type 'wire' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:148]
+WARNING: [Synth 8-8895] 'hdmi_tmds_data_p' is already implicitly declared on line 147 [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:151]
+WARNING: [Synth 8-8895] 'hdmi_tmds_data_n' is already implicitly declared on line 148 [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:152]
+WARNING: [Synth 8-8895] 'rgb_reg' is already implicitly declared on line 86 [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:171]
+WARNING: [Synth 8-8895] 'vram_data' is already implicitly declared on line 85 [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:183]
+WARNING: [Synth 8-8895] 'index' is already implicitly declared on line 84 [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:184]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN0' becomes localparam in 'encode' with formal parameter declaration list [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_3/src/hdmi_tx_0_3/hdl/encode.v:145]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN1' becomes localparam in 'encode' with formal parameter declaration list [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_3/src/hdmi_tx_0_3/hdl/encode.v:146]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN2' becomes localparam in 'encode' with formal parameter declaration list [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_3/src/hdmi_tx_0_3/hdl/encode.v:147]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN3' becomes localparam in 'encode' with formal parameter declaration list [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_3/src/hdmi_tx_0_3/hdl/encode.v:148]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1195.641 ; gain = 406.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_hdmi_text_controller_0_3' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_3/synth/design_1_hdmi_text_controller_0_3.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_text_controller_v1_0_AXI' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:28]
+WARNING: [Synth 8-324] index 601 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 602 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 603 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 604 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 605 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 606 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 607 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 608 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 609 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 610 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 611 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 612 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 613 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 614 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 615 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 616 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 617 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 618 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 619 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 620 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 621 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 622 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 623 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 624 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 625 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 626 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 627 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 628 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 629 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 630 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 631 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 632 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 633 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 634 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 635 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 636 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 637 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 638 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 639 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 640 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 641 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 642 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 643 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 644 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 645 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 646 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 647 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 648 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 649 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 650 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 651 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 652 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 653 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 654 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 655 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 656 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 657 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 658 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 659 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 660 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 661 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 662 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 663 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 664 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 665 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 666 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 667 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 668 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 669 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 670 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 671 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 672 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 673 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 674 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 675 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 676 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 677 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 678 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 679 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 680 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 681 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 682 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 683 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 684 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 685 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 686 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 687 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 688 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 689 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 690 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 691 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 692 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 693 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 694 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 695 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 696 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 697 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 698 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 699 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+WARNING: [Synth 8-324] index 700 out of range [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ipshared/a729/src/hdmi_text_controller_v1_0_AXI.sv:258]
+INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
