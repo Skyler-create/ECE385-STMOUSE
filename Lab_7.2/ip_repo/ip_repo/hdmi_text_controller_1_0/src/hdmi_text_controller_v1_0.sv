@@ -82,7 +82,6 @@ hdmi_text_controller_v1_0_AXI # (
     .S_AXI_RVALID(axi_rvalid),
     .S_AXI_RREADY(axi_rready),
     .INDEX(index), //index from row and column
-    .VRAM_DATA(vram_data),
     .RGB_REG(rgb_reg)
 );
 
@@ -181,12 +180,13 @@ logic [2:0] FR;
 
 
 logic [31:0] vram_data;
-logic [9:0] index;
+logic [10:0] index;
 logic [6:0] column;
 logic [4:0] row;
 logic [7:0] rom_data;
 assign column = drawX / 32;
 assign row = drawY / 16;
+//Changed index to column /2
 assign index = row * 20 + column;
 
 
@@ -199,6 +199,7 @@ logic [1:0] q;
 logic [3:0] Y;
 assign Y = drawY % 16;
 assign q = (drawX % 32) /8 ;
+
 always_comb
 //make back to always comb later
 begin
@@ -231,30 +232,45 @@ begin
     begin
         if(invbit == 0)
         begin
-            red = rgb_reg [24:21];
-            green = rgb_reg [20:17];
-            blue = rgb_reg [16:13];
+            // red = rgb_reg [24:21];
+            // green = rgb_reg [20:17];
+            // blue = rgb_reg [16:13];
+            red = 4'b1010;
+            green = 4'b1100;
+            blue = 4'b1110;
         end
         else if(invbit== 1)
         begin
-            red = rgb_reg [12:9];
-            green = rgb_reg [8:5];
-            blue = rgb_reg [4:1];
+            // red = rgb_reg [12:9]; 
+            // green = rgb_reg [8:5]; 
+            // blue = rgb_reg [4:1]; 
+            red = 4'b0000; 
+            green = 4'b0000; 
+            blue = 4'b0000; 
+
         end
     end
     else if(FR == 0)
     begin
         if(invbit == 0)
         begin
-            red = rgb_reg [12:9];
-            green = rgb_reg [8:5];
-            blue = rgb_reg [4:1];
+            // red = rgb_reg [12:9];
+            // green = rgb_reg [8:5];
+            // blue = rgb_reg [4:1];
+            red = 4'b0000; 
+            green = 4'b0000; 
+            blue = 4'b0000; 
+
         end
         else if(invbit ==  1)
         begin
-            red = rgb_reg [24:21];
-            green = rgb_reg [20:17];
-            blue = rgb_reg [16:13];
+            // red = rgb_reg [24:21];
+            // green = rgb_reg [20:17];
+            // blue = rgb_reg [16:13];
+            red = 4'b1010;
+            green = 4'b1100;
+            blue = 4'b1110;
+
         end
     end
 end
@@ -268,40 +284,61 @@ font_rom font_rom1 (
 
 
 //Lab7.2
-logic addrA;
+logic bram_addrA;
 logic clkA;
 logic [31:0] dinA;
 logic [31:0] doutA;
 logic enA;
-logic weA;
+logic [3:0] weA;
 
-logic addrB;
+logic bram_addrB;
 logic clkB;
 logic [31:0] dinB;
-logic [31:0] dinA;
 logic enB;
-logic weB;
+logic [3:0] weB;
 
-block_mem_gen_0 block_mem1(
+
+assign enA = (axi_arready && axi_arvalid);
+assign weA = axi_wstrb;
+
+
+//add if statement to assign Bram_addrA to either axi_araddr or axi_wraddr
+
+always_comb
+begin
+    if(axi_arready && axi_arvalid)
+    begin
+        bram_addrA = axi_araddr;
+    end
+    else if(axi_awready && axi_wvalid)
+    begin
+        bram_addrA = axi_awaddr;
+    end
+end
+
+//assign index = row * 20 + column / 2;
+assign addrB = index;
+assign vram_data = doutB;
+
+blk_mem_gen_0 block_mem1(
     //portA 
-    
-    .addra(addrA),
-    .clka(clkA),
-    .dina(dinA),
-    .douta(doutA),
-    .ena(enA),
-    .wea(weA),
+    .addra(bram_addrA), //unsure <- use logic to determine
+    .clka(axi_aclk),
+    .dina(axi_wdata), //probably axi_wdata
+    .douta(axi_rdata), //probably axi_rdata
+    .ena(enA), //fuck zuofu
+    .wea(weA), //fuck zuofu
     
 
     //portB
     //Color Mapper
-    .addrb(addrB),
-    .clkb(clkB),
-    .dinb(dinB),
-    .doutb(doutB),
+    .addrb(addrB),  // index 
+    .clkb(clkB), 
+    .dinb(dinB),  
+    .doutb(doutB), //vram data
     .enb(enB),
-    .web(weB)
-);
+    .web(weB) 
+    );
 
 
 // User logic ends

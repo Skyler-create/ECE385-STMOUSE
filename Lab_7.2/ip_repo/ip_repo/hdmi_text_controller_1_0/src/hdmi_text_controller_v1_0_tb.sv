@@ -120,6 +120,8 @@ module hdmi_text_controller_tb();
     assign pixel_hs = hdmi_text_controller_v1_0_inst.hsync;
     assign pixel_vs = hdmi_text_controller_v1_0_inst.vsync;
     assign pixel_vde = hdmi_text_controller_v1_0_inst.vde;
+    logic [9:0] index;
+    assign index = hdmi_text_controller_v1_0_inst.index;
     
     // DrawX and DrawY - these come from your internal VGA module
     assign drawX = hdmi_text_controller_v1_0_inst.drawX;

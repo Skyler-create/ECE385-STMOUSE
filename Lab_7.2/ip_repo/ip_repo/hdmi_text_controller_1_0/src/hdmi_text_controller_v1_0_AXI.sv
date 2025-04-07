@@ -102,7 +102,6 @@ module hdmi_text_controller_v1_0_AXI #
         // accept the read data and response information.
     input logic  S_AXI_RREADY,
     input logic [9:0] INDEX,
-    output logic [31:0] VRAM_DATA,
     output logic [31:0] RGB_REG
 );
 
@@ -155,8 +154,7 @@ assign S_AXI_ARREADY = axi_arready;
 assign S_AXI_RDATA	= axi_rdata;
 assign S_AXI_RRESP	= axi_rresp;
 assign S_AXI_RVALID	= axi_rvalid;
-assign VRAM_DATA = slv_regs[INDEX];
-assign RGB_REG = slv_regs[600];
+// assign RGB_REG = slv_regs[600];
 // Implement axi_awready generation
 // axi_awready is asserted for one S_AXI_ACLK clock cycle when both
 // S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
@@ -255,7 +253,7 @@ begin
     begin
         for (integer i = 0; i < 2**C_S_AXI_ADDR_WIDTH; i++)
         begin
-           slv_regs[i] <= 0;
+           // slv_regs[i] <= 0;
         end
     end
   else begin
@@ -265,7 +263,7 @@ begin
           if ( S_AXI_WSTRB[byte_index] == 1 ) begin
             // Respective byte enables are asserted as per write strobes, note the use of the index part select operator
             // '+:', you will need to understand how this operator works.
-            slv_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+            // slv_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
           end  
       end
   end
@@ -327,7 +325,7 @@ begin
           // Read address latching
           axi_araddr  <= S_AXI_ARADDR;
         end
-      else
+      else  
         begin
           axi_arready <= 1'b0;
         end
@@ -372,7 +370,7 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 always_comb
 begin
       // Address decoding for reading registers
-     reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
+     // reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
 end
 
 // Output register or memory read data
@@ -389,7 +387,7 @@ begin
       // output the read dada 
       if (slv_reg_rden)
         begin
-          axi_rdata <= reg_data_out;     // register read data
+          // axi_rdata <= reg_data_out;     // register read data
         end   
     end
 end    
