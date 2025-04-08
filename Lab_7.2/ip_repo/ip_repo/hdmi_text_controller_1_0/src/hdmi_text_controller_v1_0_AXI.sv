@@ -376,7 +376,7 @@ assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
 //end
 
 // Output register or memory read data
-always_ff @( posedge S_AXI_ACLK )
+always_comb
 begin
   if ( S_AXI_ARESETN == 1'b0 )
     begin
@@ -387,7 +387,7 @@ begin
       // When there is a valid read address (S_AXI_ARVALID) with 
       // acceptance of read address by the slave (axi_arready), 
       // output the read dada 
-      if (slv_reg_rden)
+      if (axi_rvalid)
         begin
           axi_rdata <= doutA;
         end   
