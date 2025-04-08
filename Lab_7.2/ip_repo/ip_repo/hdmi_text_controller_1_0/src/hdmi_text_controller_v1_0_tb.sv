@@ -40,12 +40,14 @@ module hdmi_text_controller_tb();
 	logic [2:0] read_prot =3'd0;	//type of read(leave at 0)
 	logic read_addr_valid = 1'b0;	//Master indicating address is valid
 	logic read_addr_ready;		    //slave ready to receive address
-
+    
 	//Read Data Channel (R)
 	logic read_data_ready = 1'b0;	//Master indicating ready to receive data
 	logic [31:0] read_data;		    //slave read data
+    logic [31:0] doutA;
 	logic [1:0] read_resp;		    //slave read response
 	logic read_data_valid;		    //slave indicating data in channel is valid
+    logic S_AXI_ARVALID;
 
     //Although we can look at the HDMI signal, it is not particularly useful for debugging
     //Instead, simulate and record the pixel clock and the pixel RGB values to generate
@@ -54,7 +56,11 @@ module hdmi_text_controller_tb();
     logic pixel_clk, pixel_hs, pixel_vs, pixel_vde;
     logic [9:0] drawX, drawY;
     logic [31:0] tb_read;
-    
+    logic slv_reg_rden;
+    logic axi_arready;
+    logic axi_rvalid;
+    logic [31:0] doutA;
+    logic enA;
     //BMP writer related signals    
     localparam BMP_WIDTH  = 800;
     localparam BMP_HEIGHT = 525;
@@ -122,11 +128,32 @@ module hdmi_text_controller_tb();
     assign pixel_vde = hdmi_text_controller_v1_0_inst.vde;
     logic [9:0] index;
     assign index = hdmi_text_controller_v1_0_inst.index;
-    
+    assign slv_reg_rden  = hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.slv_reg_rden;
+    assign axi_arready = hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.axi_arready;
+    assign S_AXI_ARVALID = hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.S_AXI_ARVALID;
+    assign axi_rvalid = hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.axi_rvalid;
+    assign enA = hdmi_text_controller_v1_0_inst.enA;
     // DrawX and DrawY - these come from your internal VGA module
     assign drawX = hdmi_text_controller_v1_0_inst.drawX;
     assign drawY = hdmi_text_controller_v1_0_inst.drawY;
-   
+    assign read_data = hdmi_text_controller_v1_0_inst.axi_rdata;
+    assign doutA = hdmi_text_controller_v1_0_inst.doutA;
+
+    logic [7:0] rom_data;
+    assign rom_data = hdmi_text_controller_v1_0_inst.rom_data;
+    
+        logic [10:0] rom_addr;
+    assign rom_addr = hdmi_text_controller_v1_0_inst.rom_addr;
+            logic [31:0] vram_data;
+    assign vram_data = hdmi_text_controller_v1_0_inst.vram_data;
+    
+                logic [10:0] bram_addrA;
+    assign bram_addrA = hdmi_text_controller_v1_0_inst.bram_addrA;
+    
+            logic [10:0] bram_addrB;
+    assign bram_addrB = hdmi_text_controller_v1_0_inst.bram_addrB;
+    
+  
     // BMP writing task, based off work from @BrianHGinc:
     // https://github.com/BrianHGinc/SystemVerilog-TestBench-BPM-picture-generator
     task save_bmp(string bmp_file_name);
@@ -250,7 +277,7 @@ module hdmi_text_controller_tb();
             begin
                 @(posedge aclk); 
                 data <= read_data;
-                // read_data_ready <= 1'b0;
+                read_data_ready <= 1'b0;
                 read_data_valid <= 1'b0;
             end
                 

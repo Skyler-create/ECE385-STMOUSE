@@ -101,7 +101,7 @@ module hdmi_text_controller_v1_0_AXI #
     // Read ready. This signal indicates that the master can
         // accept the read data and response information.
     input logic  S_AXI_RREADY,
-    input logic [31:0] douta,
+    input logic [31:0] doutA,
     input logic [9:0] INDEX,
     output logic [31:0] RGB_REG
 );
@@ -246,29 +246,29 @@ end
 // These registers are cleared when reset (active low) is applied.
 // Slave register write enable is asserted when valid address and data are available
 // and the slave is ready to accept the write address and write data.
-assign slv_reg_wren = axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID;
+//assign slv_reg_wren = axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID;
 
-always_ff @( posedge S_AXI_ACLK )
-begin
-  if ( S_AXI_ARESETN == 1'b0 )
-    begin
-        for (integer i = 0; i < 2**C_S_AXI_ADDR_WIDTH; i++)
-        begin
-           // slv_regs[i] <= 0;
-        end
-    end
-  else begin
-    if (slv_reg_wren)
-      begin
-        for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
-          if ( S_AXI_WSTRB[byte_index] == 1 ) begin
-            // Respective byte enables are asserted as per write strobes, note the use of the index part select operator
-            // '+:', you will need to understand how this operator works.
-            // slv_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
-          end  
-      end
-  end
-end    
+//always_ff @( posedge S_AXI_ACLK )
+//begin
+//  if ( S_AXI_ARESETN == 1'b0 )
+//    begin
+//        for (integer i = 0; i < 2**C_S_AXI_ADDR_WIDTH; i++)
+//        begin
+//           // slv_regs[i] <= 0;
+//        end
+//    end
+//  else begin
+//    if (slv_reg_wren)
+//      begin
+//        for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+//          if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+//            // Respective byte enables are asserted as per write strobes, note the use of the index part select operator
+//            // '+:', you will need to understand how this operator works.
+//            // slv_regs[axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]][(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+//          end  
+//      end
+//  end
+//end    
 
 // Implement write response logic generation
 // The write response and response valid signals are asserted by the slave 
@@ -368,12 +368,12 @@ end
 // Slave register read enable is asserted when valid address is available
 // and the slave is ready to accept the read address.
 assign slv_reg_rden = axi_arready & S_AXI_ARVALID & ~axi_rvalid;
-always_comb
-begin
-      // Address decoding for reading registers
-     // reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
-    //reg_data_out <= douta;
-end
+//always_comb
+//begin
+//      // Address decoding for reading registers
+//     // reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
+//    //reg_data_out <= douta;
+//end
 
 // Output register or memory read data
 always_ff @( posedge S_AXI_ACLK )
@@ -389,8 +389,7 @@ begin
       // output the read dada 
       if (slv_reg_rden)
         begin
-          // axi_rdata <= reg_data_out;     // register read data
-          axi_rdata <= douta;
+          axi_rdata <= doutA;
         end   
     end
 end    
