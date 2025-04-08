@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: ECE-Illinois
-// Engineer: Zuofu Cheng
+// Company: STMouse
+// Engineer: Skyler Lang & Tim Hsueh
 // 
 // Create Date: 06/08/2023 12:21:05 PM
 // Design Name: 
@@ -101,6 +101,7 @@ module hdmi_text_controller_v1_0_AXI #
     // Read ready. This signal indicates that the master can
         // accept the read data and response information.
     input logic  S_AXI_RREADY,
+    input logic [31:0] douta,
     input logic [9:0] INDEX,
     output logic [31:0] RGB_REG
 );
@@ -371,6 +372,7 @@ always_comb
 begin
       // Address decoding for reading registers
      // reg_data_out = slv_regs[axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB]];
+    //reg_data_out <= douta;
 end
 
 // Output register or memory read data
@@ -388,6 +390,7 @@ begin
       if (slv_reg_rden)
         begin
           // axi_rdata <= reg_data_out;     // register read data
+          axi_rdata <= douta;
         end   
     end
 end    

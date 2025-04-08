@@ -6,11 +6,10 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'axi_awaddr' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv:74]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'axi_araddr' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv:88]
-WARNING: [VRFC 10-3091] actual bit length 11 differs from formal bit length 10 for port 'INDEX' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:84]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 11 for port 'addra' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:325]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 11 for port 'addrb' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:335]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'doutb' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:338]
-WARNING: [VRFC 10-3823] variable 'axi_rdata' might have multiple concurrent drivers [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:328]
+WARNING: [VRFC 10-3091] actual bit length 11 differs from formal bit length 10 for port 'INDEX' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 11 for port 'addra' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:328]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 11 for port 'addrb' [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:338]
+WARNING: [VRFC 10-3823] variable 'rgb_reg' might have multiple concurrent drivers [c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv:204]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/VGA_controller.sv" Line 26. Module vga_controller doesn't have a timescale but at least one module in design has a timescale.

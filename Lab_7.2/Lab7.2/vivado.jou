@@ -183,3 +183,37 @@ create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/timhs/OneD
 launch_runs blk_mem_gen_0_synth_1 -jobs 8
 wait_on_run blk_mem_gen_0_synth_1
 export_simulation -of_objects [get_files c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/blk_mem_gen_0/blk_mem_gen_0.xci] -directory c:/users/timhs/onedrive/documents/vivado/lab_7.2/lab7.2/lab7.2.tmp/hdmi_text_controller_v2_0_project/hdmi_text_controller_v2_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/timhs/onedrive/documents/vivado/lab_7.2/lab7.2/lab7.2.tmp/hdmi_text_controller_v2_0_project/hdmi_text_controller_v2_0_project.ip_user_files -ipstatic_source_dir c:/users/timhs/onedrive/documents/vivado/lab_7.2/lab7.2/lab7.2.tmp/hdmi_text_controller_v2_0_project/hdmi_text_controller_v2_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/timhs/onedrive/documents/vivado/lab_7.2/lab7.2/lab7.2.tmp/hdmi_text_controller_v2_0_project/hdmi_text_controller_v2_0_project.cache/compile_simlib/modelsim} {questa=c:/users/timhs/onedrive/documents/vivado/lab_7.2/lab7.2/lab7.2.tmp/hdmi_text_controller_v2_0_project/hdmi_text_controller_v2_0_project.cache/compile_simlib/questa} {riviera=c:/users/timhs/onedrive/documents/vivado/lab_7.2/lab7.2/lab7.2.tmp/hdmi_text_controller_v2_0_project/hdmi_text_controller_v2_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/timhs/onedrive/documents/vivado/lab_7.2/lab7.2/lab7.2.tmp/hdmi_text_controller_v2_0_project/hdmi_text_controller_v2_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+launch_simulation
+set_property library xil_defaultlib [get_files  c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/font_rom.sv]
+set_property library xil_defaultlib [get_files  c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/VGA_controller.sv]
+set_property library xil_defaultlib [get_files  c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_AXI.sv]
+set_property library xil_defaultlib [get_files  c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv]
+set_property library xil_defaultlib [get_files  c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/ip_repo/ip_repo/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv]
+launch_simulation
+launch_simulation
+launch_simulation
+source hdmi_text_controller_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {all} -objects [get_filesets sim_1]
+set_property dataflow_viewer_settings "min_width=16"   [current_fileset]
+close_sim
+launch_simulation
+source hdmi_text_controller_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source hdmi_text_controller_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source hdmi_text_controller_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source hdmi_text_controller_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source hdmi_text_controller_tb.tcl
+close_sim
+close_project

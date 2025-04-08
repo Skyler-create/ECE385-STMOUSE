@@ -3,6 +3,7 @@
 
 //Modified 3/10/24 by Zuofu
 //Updated 11/18/24 by Zuofu
+//4/7:  撸 by Tim Hsueh & Skyler Lang 
 
 
 `timescale 1 ns / 1 ps
@@ -82,6 +83,7 @@ hdmi_text_controller_v1_0_AXI # (
     .S_AXI_RVALID(axi_rvalid),
     .S_AXI_RREADY(axi_rready),
     .INDEX(index), //index from row and column
+    .douta(doutA),
     .RGB_REG(rgb_reg)
 );
 
@@ -199,7 +201,7 @@ logic [1:0] q;
 logic [3:0] Y;
 assign Y = drawY % 16;
 assign q = (drawX % 32) /8 ;
-
+assign rgb_reg = 32'b00000000111011110110000000000000;
 always_comb
 //make back to always comb later
 begin
@@ -232,21 +234,21 @@ begin
     begin
         if(invbit == 0)
         begin
-            // red = rgb_reg [24:21];
-            // green = rgb_reg [20:17];
-            // blue = rgb_reg [16:13];
-            red = 4'b1010;
-            green = 4'b1100;
-            blue = 4'b1110;
+            red = rgb_reg [24:21];
+            green = rgb_reg [20:17];
+            blue = rgb_reg [16:13];
+            //red = 4'b1010;
+            //green = 4'b1100;
+            //blue = 4'b1110;
         end
         else if(invbit== 1)
         begin
-            // red = rgb_reg [12:9]; 
-            // green = rgb_reg [8:5]; 
-            // blue = rgb_reg [4:1]; 
-            red = 4'b0000; 
-            green = 4'b0000; 
-            blue = 4'b0000; 
+            red = rgb_reg [12:9]; 
+            green = rgb_reg [8:5]; 
+            blue = rgb_reg [4:1]; 
+            //red = 4'b1010;
+            //green = 4'b1100;
+            //blue = 4'b1110;
 
         end
     end
@@ -254,23 +256,22 @@ begin
     begin
         if(invbit == 0)
         begin
-            // red = rgb_reg [12:9];
-            // green = rgb_reg [8:5];
-            // blue = rgb_reg [4:1];
-            red = 4'b0000; 
-            green = 4'b0000; 
-            blue = 4'b0000; 
+            red = rgb_reg [12:9];
+            green = rgb_reg [8:5];
+            blue = rgb_reg [4:1];
+            //red = 4'b1010;
+            //green = 4'b1100;
+            //blue = 4'b1110;
 
         end
         else if(invbit ==  1)
         begin
-            // red = rgb_reg [24:21];
-            // green = rgb_reg [20:17];
-            // blue = rgb_reg [16:13];
-            red = 4'b1010;
-            green = 4'b1100;
-            blue = 4'b1110;
-
+            red = rgb_reg [24:21];
+            green = rgb_reg [20:17];
+            blue = rgb_reg [16:13];
+            //red = 4'b1010;
+            //green = 4'b1100;
+            //blue = 4'b1110;
         end
     end
 end
@@ -285,20 +286,21 @@ font_rom font_rom1 (
 
 //Lab7.2
 logic bram_addrA;
-logic clkA;
+logic clkA;         // not used
 logic [31:0] dinA;
 logic [31:0] doutA;
 logic enA;
 logic [3:0] weA;
 
 logic bram_addrB;
-logic clkB;
+logic clkB;         // not used
 logic [31:0] dinB;
+logic [31:0] doutB;
 logic enB;
 logic [3:0] weB;
 
 
-assign enA = (axi_arready && axi_arvalid);
+assign enA = ((axi_arready && axi_arvalid) || (axi_wready && axi_wvalid));
 assign weA = axi_wstrb;
 
 
@@ -319,13 +321,14 @@ end
 //assign index = row * 20 + column / 2;
 assign addrB = index;
 assign vram_data = doutB;
+assign enB = 1'b1;
 
 blk_mem_gen_0 block_mem1(
     //portA 
     .addra(bram_addrA), //unsure <- use logic to determine
     .clka(axi_aclk),
     .dina(axi_wdata), //probably axi_wdata
-    .douta(axi_rdata), //probably axi_rdata
+    .douta(doutA), //probably axi_rdata
     .ena(enA), //fuck zuofu
     .wea(weA), //fuck zuofu
     
@@ -333,7 +336,7 @@ blk_mem_gen_0 block_mem1(
     //portB
     //Color Mapper
     .addrb(addrB),  // index 
-    .clkb(clkB), 
+    .clkb(axi_aclk), 
     .dinb(dinB),  
     .doutb(doutB), //vram data
     .enb(enB),
