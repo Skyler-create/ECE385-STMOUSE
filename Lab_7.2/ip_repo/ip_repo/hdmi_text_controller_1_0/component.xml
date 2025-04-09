@@ -349,7 +349,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4f6fe7f1</spirit:value>
+            <spirit:value>fe181f13</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -374,7 +374,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4f6fe7f1</spirit:value>
+            <spirit:value>fe181f13</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -431,7 +431,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3b3ad83f</spirit:value>
+            <spirit:value>9ce1a953</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -842,16 +842,19 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/clk_wiz_0_6/clk_wiz_0.xci</spirit:name>
+        <spirit:name>src/blk_mem_gen_0_3/blk_mem_gen_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_block_mem1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/hdmi_tx_0_5/hdmi_tx_0.xci</spirit:name>
+        <spirit:name>src/hdmi_tx_0_7/hdmi_tx_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_vga_to_hdmi</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/blk_mem_gen_0_1/blk_mem_gen_0.xci</spirit:name>
+        <spirit:name>src/clk_wiz_0_9/clk_wiz_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_clk_wiz</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/VGA_controller.sv</spirit:name>
@@ -868,7 +871,7 @@
       <spirit:file>
         <spirit:name>src/hdmi_text_controller_v1_0.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_af674aa4</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_9ff62a80</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -904,16 +907,19 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/clk_wiz_0_6/clk_wiz_0.xci</spirit:name>
+        <spirit:name>src/blk_mem_gen_0_3/blk_mem_gen_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_block_mem1</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/hdmi_tx_0_5/hdmi_tx_0.xci</spirit:name>
+        <spirit:name>src/hdmi_tx_0_7/hdmi_tx_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_vga_to_hdmi</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/blk_mem_gen_0_1/blk_mem_gen_0.xci</spirit:name>
+        <spirit:name>src/clk_wiz_0_9/clk_wiz_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_clk_wiz</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/VGA_controller.sv</spirit:name>
@@ -1083,17 +1089,17 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreRevision>26</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:hdmi_text_controller:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2025-04-08T16:02:43Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-04-09T08:11:34Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a151191a"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="60746b78"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fc47d51c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cbe7e6d8"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="3e16aceb"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="30bf43bf"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="246731e6"/>

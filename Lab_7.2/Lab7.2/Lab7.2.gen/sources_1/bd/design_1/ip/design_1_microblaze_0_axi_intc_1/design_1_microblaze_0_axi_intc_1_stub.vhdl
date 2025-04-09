@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Sun Apr  6 20:32:05 2025
+-- Date        : Sun Apr  6 20:32:04 2025
 -- Host        : Tims-Laptop running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_1/design_1_microblaze_0_axi_intc_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_microblaze_0_axi_intc_1 -prefix
+--               design_1_microblaze_0_axi_intc_1_ design_1_microblaze_0_axi_intc_1_stub.vhdl
 -- Design      : design_1_microblaze_0_axi_intc_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1

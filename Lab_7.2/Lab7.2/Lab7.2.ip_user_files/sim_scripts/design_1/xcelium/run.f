@@ -99,21 +99,21 @@
   "../../../bd/design_1/ip/design_1_rst_clk_wiz_1_100M_1/sim/design_1_rst_clk_wiz_1_100M_1.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/src/clk_wiz_0_6/clk_wiz_0_clk_wiz.v" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/src/clk_wiz_0_6/clk_wiz_0.v" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/src/hdmi_tx_0_5/hdl/encode.v" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/src/hdmi_tx_0_5/hdl/serdes_10_to_1.v" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/src/hdmi_tx_0_5/hdl/srldelay.v" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/src/hdmi_tx_0_5/hdl/hdmi_tx_v1_0.v" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/src/hdmi_tx_0_5/sim/hdmi_tx_0.v" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/src/blk_mem_gen_0_1/sim/blk_mem_gen_0.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/blk_mem_gen_0_3/sim/blk_mem_gen_0.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/hdmi_tx_0_7/hdl/encode.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/hdmi_tx_0_7/hdl/serdes_10_to_1.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/hdmi_tx_0_7/hdl/srldelay.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/hdmi_tx_0_7/hdl/hdmi_tx_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/hdmi_tx_0_7/sim/hdmi_tx_0.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/clk_wiz_0_9/clk_wiz_0_clk_wiz.v" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/clk_wiz_0_9/clk_wiz_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/design_1/ipshared/298a/src/VGA_controller.sv" \
-  "../../../bd/design_1/ipshared/298a/src/font_rom.sv" \
-  "../../../bd/design_1/ipshared/298a/src/hdmi_text_controller_v1_0_AXI.sv" \
-  "../../../bd/design_1/ipshared/298a/src/hdmi_text_controller_v1_0.sv" \
-  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_4/sim/design_1_hdmi_text_controller_0_4.sv" \
+  "../../../bd/design_1/ipshared/233b/src/VGA_controller.sv" \
+  "../../../bd/design_1/ipshared/233b/src/font_rom.sv" \
+  "../../../bd/design_1/ipshared/233b/src/hdmi_text_controller_v1_0_AXI.sv" \
+  "../../../bd/design_1/ipshared/233b/src/hdmi_text_controller_v1_0.sv" \
+  "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/sim/design_1_hdmi_text_controller_0_5.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/sim/design_1.v" \

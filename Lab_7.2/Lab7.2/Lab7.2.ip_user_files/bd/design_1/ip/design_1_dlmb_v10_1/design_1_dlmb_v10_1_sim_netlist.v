@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 // Date        : Sun Apr  6 20:31:58 2025
 // Host        : Tims-Laptop running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_1/design_1_dlmb_v10_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_dlmb_v10_1 -prefix
+//               design_1_dlmb_v10_1_ design_1_dlmb_v10_1_sim_netlist.v
 // Design      : design_1_dlmb_v10_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -126,7 +126,7 @@ module design_1_dlmb_v10_1
 endmodule
 
 (* C_EXT_RESET_HIGH = "1" *) (* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) 
-(* C_LMB_NUM_SLAVES = "1" *) (* C_LMB_PROTOCOL = "0" *) (* ORIG_REF_NAME = "lmb_v10" *) 
+(* C_LMB_NUM_SLAVES = "1" *) (* C_LMB_PROTOCOL = "0" *) 
 module design_1_dlmb_v10_1_lmb_v10
    (LMB_Clk,
     SYS_Rst,

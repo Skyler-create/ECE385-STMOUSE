@@ -52,7 +52,7 @@ void hdmiTestWeek1()
 		if (checksum[j] != readsum[j])
 		{
 			printf ("Checksum mismatch!, check your Avalon-MM code\n\r");
-			while (1){};
+//			while (1){};
 		}
 	}
 	

@@ -1,0 +1,926 @@
+19:34:48 DEBUG : Logs will be stored at 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/IDE.log'.
+19:34:52 INFO  : Registering command handlers for Vitis TCF services
+19:34:52 INFO  : Platform repository initialization has completed.
+19:34:52 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\temp_xsdb_launch_script.tcl
+19:34:55 INFO  : XSCT server has started successfully.
+19:34:55 INFO  : plnx-install-location is set to ''
+19:34:55 INFO  : Successfully done setting XSCT server connection channel  
+19:34:55 INFO  : Successfully done setting workspace for the tool. 
+19:34:55 INFO  : Successfully done query RDI_DATADIR 
+19:35:59 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+19:35:59 INFO  : Result from executing command 'getPlatforms': 
+19:35:59 WARN  : An unexpected exception occurred in the module 'platform project logging'
+19:35:59 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+19:36:02 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+20:45:07 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:45:07 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+20:45:08 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+20:47:37 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+21:28:28 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+21:28:43 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+21:29:00 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+22:19:26 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+22:20:14 INFO  : Result from executing command 'removePlatformRepo': 
+22:20:27 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+22:20:27 INFO  : Result from executing command 'getPlatforms': 
+22:20:27 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+22:20:30 INFO  : The hardware specification used by project 'lab7_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:20:30 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+22:20:30 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+22:20:30 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream' in project 'lab7_2'.
+22:21:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:21:24 INFO  : Jtag cable 'RealDigital Boo 88710000000FA' is selected.
+22:21:24 INFO  : 'jtag frequency' command is executed.
+22:21:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:21:27 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:21:27 INFO  : Context for processor 'microblaze_0' is selected.
+22:21:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+22:21:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:21:27 INFO  : Context for processor 'microblaze_0' is selected.
+22:21:27 INFO  : System reset is completed.
+22:21:30 INFO  : 'after 3000' command is executed.
+22:21:30 INFO  : Context for processor 'microblaze_0' is selected.
+22:21:31 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+22:21:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+22:21:31 INFO  : Context for processor 'microblaze_0' is selected.
+22:21:31 INFO  : 'con' command is executed.
+22:21:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:21:31 INFO  : Disconnected from the channel tcfchan#4.
+22:22:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:22:15 INFO  : Jtag cable 'RealDigital Boo 88710000000FA' is selected.
+22:22:15 INFO  : 'jtag frequency' command is executed.
+22:22:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:22:17 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:22:17 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:17 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+22:22:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:22:17 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:17 INFO  : System reset is completed.
+22:22:20 INFO  : 'after 3000' command is executed.
+22:22:20 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:21 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+22:22:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+22:22:21 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:21 INFO  : 'con' command is executed.
+22:22:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:22:21 INFO  : Disconnected from the channel tcfchan#5.
+22:22:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:22:54 INFO  : Jtag cable 'RealDigital Boo 88710000000FA' is selected.
+22:22:54 INFO  : 'jtag frequency' command is executed.
+22:22:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:22:55 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:22:56 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:56 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+22:22:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:22:56 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:56 INFO  : System reset is completed.
+22:22:59 INFO  : 'after 3000' command is executed.
+22:22:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:22:59 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:59 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+22:22:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+22:22:59 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:59 INFO  : 'con' command is executed.
+22:22:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:22:59 INFO  : Disconnected from the channel tcfchan#6.
+22:22:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:22:59 ERROR : Invalid target. Use "connect" command to connect to hw_server/TCF agent
+22:23:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:23:17 INFO  : Jtag cable 'RealDigital Boo 88710000000FA' is selected.
+22:23:17 INFO  : 'jtag frequency' command is executed.
+22:23:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:23:18 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:23:18 INFO  : Context for processor 'microblaze_0' is selected.
+22:23:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+22:23:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:23:18 INFO  : Context for processor 'microblaze_0' is selected.
+22:23:18 INFO  : System reset is completed.
+22:23:21 INFO  : 'after 3000' command is executed.
+22:23:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:23:21 INFO  : Context for processor 'microblaze_0' is selected.
+22:23:22 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+22:23:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+22:23:22 INFO  : Context for processor 'microblaze_0' is selected.
+22:23:22 INFO  : 'con' command is executed.
+22:23:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:23:22 INFO  : Disconnected from the channel tcfchan#7.
+22:23:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:23:22 ERROR : Invalid target. Use "connect" command to connect to hw_server/TCF agent
+22:23:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:23:30 INFO  : Jtag cable 'RealDigital Boo 88710000000FA' is selected.
+22:23:30 INFO  : 'jtag frequency' command is executed.
+22:23:33 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+22:23:33 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+22:23:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:23:33 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+22:23:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:23:59 INFO  : Jtag cable 'RealDigital Boo 88710000000FA' is selected.
+22:23:59 INFO  : 'jtag frequency' command is executed.
+22:24:02 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+22:24:02 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+22:24:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:24:02 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000FA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+22:24:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:24:48 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+22:24:48 INFO  : 'jtag frequency' command is executed.
+22:24:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn3-0362f093-0"}' command is executed.
+22:24:49 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:24:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:24:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+22:24:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:24:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:24:49 INFO  : System reset is completed.
+22:24:52 INFO  : 'after 3000' command is executed.
+22:24:52 INFO  : Context for processor 'microblaze_0' is selected.
+22:24:53 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+22:24:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn3-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+22:24:53 INFO  : Context for processor 'microblaze_0' is selected.
+22:24:53 INFO  : 'con' command is executed.
+22:24:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:24:53 INFO  : Disconnected from the channel tcfchan#8.
+22:26:11 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+22:26:26 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+22:26:26 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+22:26:26 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+22:29:18 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+22:29:32 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+22:29:42 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+22:29:48 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+22:30:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:30:13 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+22:30:13 INFO  : 'jtag frequency' command is executed.
+22:30:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:30:15 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:30:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:15 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+22:30:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:30:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:15 INFO  : System reset is completed.
+22:30:18 INFO  : 'after 3000' command is executed.
+22:30:18 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:19 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+22:30:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+22:30:19 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:19 INFO  : 'con' command is executed.
+22:30:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:30:19 INFO  : Disconnected from the channel tcfchan#10.
+22:30:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:30:49 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+22:30:49 INFO  : 'jtag frequency' command is executed.
+22:30:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:30:50 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:30:50 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+22:30:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:30:50 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:50 INFO  : System reset is completed.
+22:30:53 INFO  : 'after 3000' command is executed.
+22:30:53 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:54 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+22:30:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+22:30:54 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:54 INFO  : 'con' command is executed.
+22:30:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:30:54 INFO  : Disconnected from the channel tcfchan#11.
+22:31:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:31:10 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+22:31:10 INFO  : 'jtag frequency' command is executed.
+22:31:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:31:12 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+22:31:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+22:31:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:31:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:12 INFO  : System reset is completed.
+22:31:15 INFO  : 'after 3000' command is executed.
+22:31:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:15 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+22:31:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+22:31:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:15 INFO  : 'con' command is executed.
+22:31:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:31:15 INFO  : Disconnected from the channel tcfchan#12.
+22:32:00 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+22:48:47 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+23:01:01 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+23:01:15 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+23:01:15 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+23:01:15 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+23:01:17 INFO  : The hardware specification used by project 'lab7_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:01:17 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+23:01:17 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+23:01:17 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream' in project 'lab7_2'.
+23:01:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:01:56 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+23:01:56 INFO  : 'jtag frequency' command is executed.
+23:01:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:01:58 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:01:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+23:01:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:01:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:01:58 INFO  : System reset is completed.
+23:02:01 INFO  : 'after 3000' command is executed.
+23:02:01 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:02 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+23:02:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+23:02:02 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:02 INFO  : 'con' command is executed.
+23:02:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:02:02 INFO  : Disconnected from the channel tcfchan#14.
+23:02:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:02:20 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+23:02:20 INFO  : 'jtag frequency' command is executed.
+23:02:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:02:21 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:02:21 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:21 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+23:02:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:02:21 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:21 INFO  : System reset is completed.
+23:02:24 INFO  : 'after 3000' command is executed.
+23:02:24 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:25 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+23:02:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+23:02:25 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:25 INFO  : 'con' command is executed.
+23:02:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:02:25 INFO  : Disconnected from the channel tcfchan#15.
+23:05:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:05:00 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+23:05:00 INFO  : 'jtag frequency' command is executed.
+23:05:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:05:02 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:05:02 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+23:05:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:05:02 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:02 INFO  : System reset is completed.
+23:05:05 INFO  : 'after 3000' command is executed.
+23:05:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:05 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+23:05:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+23:05:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:05:05 INFO  : 'con' command is executed.
+23:05:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:05:05 INFO  : Disconnected from the channel tcfchan#16.
+23:05:16 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+23:06:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:06:01 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+23:06:01 INFO  : 'jtag frequency' command is executed.
+23:06:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:06:02 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:06:02 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+23:06:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:06:02 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:02 INFO  : System reset is completed.
+23:06:05 INFO  : 'after 3000' command is executed.
+23:06:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:06 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+23:06:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+23:06:06 INFO  : Context for processor 'microblaze_0' is selected.
+23:06:06 INFO  : 'con' command is executed.
+23:06:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:06:06 INFO  : Disconnected from the channel tcfchan#17.
+23:07:00 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+23:07:10 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+23:07:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:07:20 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+23:07:20 INFO  : 'jtag frequency' command is executed.
+23:07:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:07:21 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:07:21 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:21 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+23:07:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:07:21 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:21 INFO  : System reset is completed.
+23:07:24 INFO  : 'after 3000' command is executed.
+23:07:24 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:25 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+23:07:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+23:07:25 INFO  : Context for processor 'microblaze_0' is selected.
+23:07:25 INFO  : 'con' command is executed.
+23:07:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:07:25 INFO  : Disconnected from the channel tcfchan#18.
+23:08:16 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+23:08:21 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+23:08:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:08:36 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+23:08:36 INFO  : 'jtag frequency' command is executed.
+23:08:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:08:37 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:08:37 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+23:08:37 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:08:38 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:38 INFO  : System reset is completed.
+23:08:41 INFO  : 'after 3000' command is executed.
+23:08:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:41 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+23:08:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+23:08:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:41 INFO  : 'con' command is executed.
+23:08:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:08:41 INFO  : Disconnected from the channel tcfchan#19.
+23:33:44 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+23:34:53 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+23:34:53 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+23:34:54 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+23:34:56 INFO  : The hardware specification used by project 'lab7_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:34:56 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+23:34:56 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+23:34:56 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream' in project 'lab7_2'.
+23:35:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:35:18 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+23:35:18 INFO  : 'jtag frequency' command is executed.
+23:35:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:35:20 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+23:35:20 INFO  : Context for processor 'microblaze_0' is selected.
+23:35:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+23:35:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:35:20 INFO  : Context for processor 'microblaze_0' is selected.
+23:35:20 INFO  : System reset is completed.
+23:35:23 INFO  : 'after 3000' command is executed.
+23:35:23 INFO  : Context for processor 'microblaze_0' is selected.
+23:35:23 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+23:35:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+23:35:23 INFO  : Context for processor 'microblaze_0' is selected.
+23:35:23 INFO  : 'con' command is executed.
+23:35:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:35:23 INFO  : Disconnected from the channel tcfchan#21.
+00:01:58 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+00:02:14 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+00:02:14 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+00:02:14 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+00:02:16 INFO  : The hardware specification used by project 'lab7_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+00:02:16 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+00:02:16 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+00:02:16 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream' in project 'lab7_2'.
+00:02:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:02:55 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+00:02:55 INFO  : 'jtag frequency' command is executed.
+00:02:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:02:57 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+00:02:57 INFO  : Context for processor 'microblaze_0' is selected.
+00:02:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+00:02:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:02:57 INFO  : Context for processor 'microblaze_0' is selected.
+00:02:57 INFO  : System reset is completed.
+00:03:00 INFO  : 'after 3000' command is executed.
+00:03:00 INFO  : Context for processor 'microblaze_0' is selected.
+00:03:00 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+00:03:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+00:03:00 INFO  : Context for processor 'microblaze_0' is selected.
+00:03:01 INFO  : 'con' command is executed.
+00:03:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:03:01 INFO  : Disconnected from the channel tcfchan#23.
+00:59:06 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+00:59:24 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+00:59:24 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+00:59:24 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+00:59:27 INFO  : The hardware specification used by project 'lab7_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+00:59:27 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+00:59:27 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+00:59:27 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream' in project 'lab7_2'.
+01:00:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:00:20 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+01:00:20 INFO  : 'jtag frequency' command is executed.
+01:00:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+01:00:22 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+01:00:22 INFO  : Context for processor 'microblaze_0' is selected.
+01:00:22 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+01:00:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:00:22 INFO  : Context for processor 'microblaze_0' is selected.
+01:00:22 INFO  : System reset is completed.
+01:00:25 INFO  : 'after 3000' command is executed.
+01:00:25 INFO  : Context for processor 'microblaze_0' is selected.
+01:00:25 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+01:00:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+01:00:25 INFO  : Context for processor 'microblaze_0' is selected.
+01:00:25 INFO  : 'con' command is executed.
+01:00:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+01:00:25 INFO  : Disconnected from the channel tcfchan#25.
+01:06:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:06:41 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+01:06:41 INFO  : 'jtag frequency' command is executed.
+01:06:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+01:06:43 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+01:06:43 INFO  : Context for processor 'microblaze_0' is selected.
+01:06:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+01:06:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:06:43 INFO  : Context for processor 'microblaze_0' is selected.
+01:06:43 INFO  : System reset is completed.
+01:06:46 INFO  : 'after 3000' command is executed.
+01:06:46 INFO  : Context for processor 'microblaze_0' is selected.
+01:06:46 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+01:06:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+01:06:46 INFO  : Context for processor 'microblaze_0' is selected.
+01:06:46 INFO  : 'con' command is executed.
+01:06:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+01:06:46 INFO  : Disconnected from the channel tcfchan#26.
+01:06:56 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+01:07:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:07:05 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+01:07:05 INFO  : 'jtag frequency' command is executed.
+01:07:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+01:07:07 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+01:07:07 INFO  : Context for processor 'microblaze_0' is selected.
+01:07:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+01:07:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:07:07 INFO  : Context for processor 'microblaze_0' is selected.
+01:07:07 INFO  : System reset is completed.
+01:07:10 INFO  : 'after 3000' command is executed.
+01:07:10 INFO  : Context for processor 'microblaze_0' is selected.
+01:07:10 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+01:07:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+01:07:10 INFO  : Context for processor 'microblaze_0' is selected.
+01:07:10 INFO  : 'con' command is executed.
+01:07:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+01:07:10 INFO  : Disconnected from the channel tcfchan#27.
+01:37:07 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+01:37:20 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+01:37:20 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+01:37:20 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+01:37:23 INFO  : The hardware specification used by project 'lab7_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+01:37:23 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+01:37:23 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+01:37:23 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream' in project 'lab7_2'.
+01:37:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:37:31 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+01:37:31 INFO  : 'jtag frequency' command is executed.
+01:37:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+01:37:32 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+01:37:32 INFO  : Context for processor 'microblaze_0' is selected.
+01:37:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+01:37:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:37:32 INFO  : Context for processor 'microblaze_0' is selected.
+01:37:32 INFO  : System reset is completed.
+01:37:35 INFO  : 'after 3000' command is executed.
+01:37:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:37:35 INFO  : Context for processor 'microblaze_0' is selected.
+01:37:36 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+01:37:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+01:37:36 INFO  : Context for processor 'microblaze_0' is selected.
+01:37:36 INFO  : 'con' command is executed.
+01:37:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+01:37:36 INFO  : Disconnected from the channel tcfchan#29.
+01:37:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+01:37:36 ERROR : Invalid target. Use "connect" command to connect to hw_server/TCF agent
+01:45:36 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+01:45:49 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+01:45:49 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+01:45:50 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+01:45:52 INFO  : The hardware specification used by project 'lab7_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+01:45:52 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+01:45:52 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+01:45:52 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream' in project 'lab7_2'.
+01:46:02 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+01:46:06 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+01:46:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:46:34 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+01:46:34 INFO  : 'jtag frequency' command is executed.
+01:46:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+01:46:35 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+01:46:35 INFO  : Context for processor 'microblaze_0' is selected.
+01:46:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+01:46:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:46:36 INFO  : Context for processor 'microblaze_0' is selected.
+01:46:36 INFO  : System reset is completed.
+01:46:39 INFO  : 'after 3000' command is executed.
+01:46:39 INFO  : Context for processor 'microblaze_0' is selected.
+01:46:39 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+01:46:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+01:46:39 INFO  : Context for processor 'microblaze_0' is selected.
+01:46:39 INFO  : 'con' command is executed.
+01:46:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+01:46:39 INFO  : Disconnected from the channel tcfchan#31.
+03:20:00 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+03:20:19 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+03:20:19 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+03:20:19 INFO  : Checking for BSP changes to sync application flags for project 'lab7_2'...
+03:20:22 INFO  : The hardware specification used by project 'lab7_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+03:20:22 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+03:20:22 INFO  : The file 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+03:20:22 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\timhs\OneDrive\Documents\Vivado\Lab_7.2\Lab7_2_Vitis\lab7_2\_ide\bitstream' in project 'lab7_2'.
+03:20:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:20:44 INFO  : Jtag cable 'RealDigital Boo 887100000000A' is selected.
+03:20:44 INFO  : 'jtag frequency' command is executed.
+03:20:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+03:20:46 INFO  : Device configured successfully with "C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+03:20:46 INFO  : Context for processor 'microblaze_0' is selected.
+03:20:46 INFO  : Hardware design and registers information is loaded from 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa'.
+03:20:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+03:20:46 INFO  : Context for processor 'microblaze_0' is selected.
+03:20:46 INFO  : System reset is completed.
+03:20:49 INFO  : 'after 3000' command is executed.
+03:20:49 INFO  : Context for processor 'microblaze_0' is selected.
+03:20:49 INFO  : The application 'C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf' is downloaded to processor 'microblaze_0'.
+03:20:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000000A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7_2_Vitis/lab7_2/Debug/lab7_2.elf
+----------------End of Script----------------
+
+03:20:50 INFO  : Context for processor 'microblaze_0' is selected.
+03:20:50 INFO  : 'con' command is executed.
+03:20:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+03:20:50 INFO  : Disconnected from the channel tcfchan#33.
