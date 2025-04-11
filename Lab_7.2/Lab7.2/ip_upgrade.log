@@ -1,6 +1,426 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Apr 10 20:02:32 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 50) to (Rev. 51)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Apr 10 19:42:15 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 49) to (Rev. 50)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Apr 10 19:29:52 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 48) to (Rev. 49)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Apr 10 19:28:38 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 47) to (Rev. 48)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Apr 10 19:07:37 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 46) to (Rev. 47)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Apr 10 18:51:24 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 45) to (Rev. 46)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 20:21:33 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 43) to (Rev. 45)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 20:02:38 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 41) to (Rev. 43)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 19:34:43 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 39) to (Rev. 41)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 19:11:03 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 38) to (Rev. 39)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 13:50:33 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 36) to (Rev. 38)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 13:46:06 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 35) to (Rev. 36)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 13:29:52 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 34) to (Rev. 35)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 13:08:26 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 33) to (Rev. 34)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 12:45:50 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 32) to (Rev. 33)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 12:34:54 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 31) to (Rev. 32)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 12:12:58 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 29) to (Rev. 31)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 11:53:34 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 28) to (Rev. 29)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 11:34:55 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 27) to (Rev. 28)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Apr  9 11:28:58 2025
+| Host         : Tims-Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7s50csga324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_hdmi_text_controller_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_hdmi_text_controller_0_5 (xilinx.com:user:hdmi_text_controller:2.0) from (Rev. 26) to (Rev. 27)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 | Date         : Wed Apr  9 03:11:55 2025
 | Host         : Tims-Laptop running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

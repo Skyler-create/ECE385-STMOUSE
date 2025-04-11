@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Apr  9 03:18:44 2025
+| Date         : Thu Apr 10 20:07:27 2025
 | Host         : Tims-Laptop running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,14 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 9
+             Violations found: 53
 +-----------+----------+--------------------------------------------------------+------------+
 | Rule      | Severity | Description                                            | Violations |
 +-----------+----------+--------------------------------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert                           | 4          |
 | TIMING-9  | Warning  | Unknown CDC Logic                                      | 1          |
 | TIMING-18 | Warning  | Missing input or output delay                          | 3          |
+| TIMING-20 | Warning  | Non-clocked latch                                      | 43         |
 | XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
+| LATCH-1   | Advisory | Existing latches in the design                         | 1          |
 +-----------+----------+--------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -90,11 +92,231 @@ Missing input or output delay
 An output delay is missing on uart_rtl_0_txd relative to clock(s) clk_100
 Related violations: <none>
 
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[0] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[10] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[1] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[2] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[3] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[4] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[5] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[6] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[7] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[8] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/bram_addrA_reg[9] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/bram_addrA_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[0] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[10] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[11] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[12] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[13] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[14] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[15] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[16] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[17] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[18] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[19] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[1] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[20] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[21] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[22] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[23] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[24] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[25] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[26] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[27] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[28] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[29] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[2] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[30] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[31] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[3] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[4] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[5] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[6] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[7] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[8] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[9] cannot be properly analyzed as its control pin block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/axi_rdata_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
 XDCC-7#1 Warning
 Scoped Clock constraint overwritten on the same source  
 A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
 New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk] (Source: C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.srcs/constrs_1/imports/src/mb_usb_hdmi_top.xdc (Line: 1))
 Previous: create_clock -period 10.000 [get_ports Clk] (Source: c:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/Lab7.2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1.xdc (Line: 56))
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 43 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

@@ -37,3 +37,45 @@ platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7
 platform generate -domains 
 platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
 platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains standalone_microblaze_0 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/timhs/OneDrive/Documents/Vivado/Lab_7.2/Lab7.2/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate

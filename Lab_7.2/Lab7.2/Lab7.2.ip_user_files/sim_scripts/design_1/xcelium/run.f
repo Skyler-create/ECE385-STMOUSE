@@ -109,10 +109,10 @@
   "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/clk_wiz_0_9/clk_wiz_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/design_1/ipshared/233b/src/VGA_controller.sv" \
-  "../../../bd/design_1/ipshared/233b/src/font_rom.sv" \
-  "../../../bd/design_1/ipshared/233b/src/hdmi_text_controller_v1_0_AXI.sv" \
-  "../../../bd/design_1/ipshared/233b/src/hdmi_text_controller_v1_0.sv" \
+  "../../../bd/design_1/ipshared/9882/src/VGA_controller.sv" \
+  "../../../bd/design_1/ipshared/9882/src/font_rom.sv" \
+  "../../../bd/design_1/ipshared/9882/src/hdmi_text_controller_v1_0_AXI.sv" \
+  "../../../bd/design_1/ipshared/9882/src/hdmi_text_controller_v1_0.sv" \
   "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/sim/design_1_hdmi_text_controller_0_5.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

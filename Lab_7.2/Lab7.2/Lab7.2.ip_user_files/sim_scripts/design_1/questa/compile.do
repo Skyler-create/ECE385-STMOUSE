@@ -154,10 +154,10 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.2.gen/sources_
 "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/clk_wiz_0_9/clk_wiz_0.v" \
 
 vlog -work xil_defaultlib  -incr -mfcu  -sv "+incdir+../../../../Lab7.2.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.2.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.2.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/clk_wiz_0_9" \
-"../../../bd/design_1/ipshared/233b/src/VGA_controller.sv" \
-"../../../bd/design_1/ipshared/233b/src/font_rom.sv" \
-"../../../bd/design_1/ipshared/233b/src/hdmi_text_controller_v1_0_AXI.sv" \
-"../../../bd/design_1/ipshared/233b/src/hdmi_text_controller_v1_0.sv" \
+"../../../bd/design_1/ipshared/9882/src/VGA_controller.sv" \
+"../../../bd/design_1/ipshared/9882/src/font_rom.sv" \
+"../../../bd/design_1/ipshared/9882/src/hdmi_text_controller_v1_0_AXI.sv" \
+"../../../bd/design_1/ipshared/9882/src/hdmi_text_controller_v1_0.sv" \
 "../../../bd/design_1/ip/design_1_hdmi_text_controller_0_5/sim/design_1_hdmi_text_controller_0_5.sv" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Lab7.2.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Lab7.2.gen/sources_1/bd/design_1/ipshared/7698" "+incdir+../../../../Lab7.2.gen/sources_1/bd/design_1/ip/design_1_hdmi_text_controller_0_5/src/clk_wiz_0_9" \

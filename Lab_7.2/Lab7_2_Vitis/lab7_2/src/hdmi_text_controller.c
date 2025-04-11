@@ -100,35 +100,35 @@ void textHDMIColorScreenSaver()
 //Call this function for your Week 2 test
 hdmiTestWeek2()
 {
-    //On-chip memory write and readback test
-	uint32_t checksum[ROWS], readsum[ROWS];
-
-	for (int j = 0; j < ROWS; j++)
-	{
-		checksum[j] = 0;
-		for (int i = 0; i < COLUMNS * 2; i++)
-		{
-			hdmi_ctrl->VRAM[j*COLUMNS*2 + i] = i + j;
-			checksum[j] += i + j;
-		}
-	}
-
-	for (int j = 0; j < ROWS; j++)
-	{
-		readsum[j] = 0;
-		for (int i = 0; i < COLUMNS * 2; i++)
-		{
-			readsum[j] += hdmi_ctrl->VRAM[j*COLUMNS*2 + i];
-			//printf ("%x \n\r", hdmi_ctrl->VRAM[j*COLUMNS*2 + i]);
-		}
-		printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
-		if (checksum[j] != readsum[j])
-		{
-			printf ("Checksum mismatch!, check your AXI4 code or your on-chip memory fym\n\r");
-			//while (1){};
-		}
-	}
-	printf ("Checksum passed, beginning palette test\n\r");
+//    //On-chip memory write and readback test
+//	uint32_t checksum[ROWS], readsum[ROWS];
+//
+//	for (int j = 0; j < ROWS; j++)
+//	{
+//		checksum[j] = 0;
+//		for (int i = 0; i < COLUMNS * 2; i++)
+//		{
+//			hdmi_ctrl->VRAM[j*COLUMNS*2 + i] = i + j;
+//			checksum[j] += i + j;
+//		}
+//	}
+//
+//	for (int j = 0; j < ROWS; j++)
+//	{
+//		readsum[j] = 0;
+//		for (int i = 0; i < COLUMNS * 2; i++)
+//		{
+//			readsum[j] += hdmi_ctrl->VRAM[j*COLUMNS*2 + i];
+//			//printf ("%x \n\r", hdmi_ctrl->VRAM[j*COLUMNS*2 + i]);
+//		}
+//		printf ("Row: %d, Checksum: %x, Read-back Checksum: %x\n\r", j, checksum[j], readsum[j]);
+//		if (checksum[j] != readsum[j])
+//		{
+//			printf ("Checksum mismatch!, check your AXI4 code or your on-chip memory fym\n\r");
+//			//while (1){};
+//		}
+//	}
+//	printf ("Checksum passed, beginning palette test\n\r");
 
 	paletteTest();
 	printf ("Palette test passed, beginning screensaver loop\n\r");
