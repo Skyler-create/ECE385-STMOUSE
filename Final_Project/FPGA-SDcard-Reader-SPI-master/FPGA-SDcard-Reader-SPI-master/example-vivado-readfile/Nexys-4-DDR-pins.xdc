@@ -72,6 +72,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports sd_spi_ssn]
 ##USB-RS232 Interface
 #set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports { uart_rx }]; #IO_L7P_T1_AD6P_35 Sch=uart_txd_in
 # set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { uart_tx }]; #IO_L11N_T1_SRCC_35 Sch=uart_rxd_out
+set_property PACKAGE_PIN C4 [get_ports uart_tx]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_tx]
 
 set_property IOSTANDARD LVCMOS33 [get_ports uart_rtl_0_txd]
 set_property PACKAGE_PIN A16 [get_ports uart_rtl_0_txd]

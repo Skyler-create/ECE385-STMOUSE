@@ -1,13 +1,13 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Thu Apr 17 23:09:16 2025
--- Host        : Tims-Laptop running 64-bit major release  (build 9200)
+-- Date        : Fri Apr 18 01:05:55 2025
+-- Host        : DESKTOP-808U3NO running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/FPGA-SDcard-Reader-SPI-master/FPGA-SDcard-Reader-SPI-master/example-vivado-readfile/Nexys4-ReadFile.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl
+--               c:/ECE385/ECE385-STMOUSE/Final_Project/FPGA-SDcard-Reader-SPI-master/FPGA-SDcard-Reader-SPI-master/example-vivado-readfile/Nexys4-ReadFile.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl
 -- Design      : clk_wiz_0
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7a100tcsg324-1
+-- Device      : xc7s50csga324-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
