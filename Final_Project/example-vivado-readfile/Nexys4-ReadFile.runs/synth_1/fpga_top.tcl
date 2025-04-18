@@ -73,6 +73,7 @@ OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
 set_param synth.incrementalSynthesisCache C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/.Xil/Vivado-31048-Tims-Laptop/incrSyn
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -98,10 +99,10 @@ read_verilog -library xil_defaultlib {
   C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v
   C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/fpga_top.v
 }
-read_ip -quiet C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

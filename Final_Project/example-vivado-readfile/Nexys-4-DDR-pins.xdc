@@ -3,12 +3,12 @@
 #set_property IOSTANDARD LVCMOS33 [get_ports clk100mhz]
 #create_clock -period 10.000 -name sys_clk_pin -waveform {0 5} [get_ports clk100mhz]
 
-set_property PACKAGE_PIN N15 [get_ports clk100mhz]
+set_property PACKAGE_PIN H3 [get_ports clk100mhz]
 set_property IOSTANDARD LVCMOS33 [get_ports clk100mhz]
 create_clock -period 10.000 -name sys_clk_pin -waveform {0 5} [get_ports clk100mhz]
 
 ## Reset
-set_property PACKAGE_PIN L17 [get_ports resetn]
+set_property PACKAGE_PIN H14 [get_ports resetn]
 set_property IOSTANDARD LVCMOS33 [get_ports resetn]
 
 ## UART (only TX mapped; RX may be added if needed)

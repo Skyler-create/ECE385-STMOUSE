@@ -127,6 +127,7 @@ set rc [catch {
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 2
   set_param synth.incrementalSynthesisCache C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/.Xil/Vivado-31048-Tims-Laptop/incrSyn
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
   set_property design_mode GateLvl [current_fileset]
@@ -141,7 +142,7 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/fpga_top.dcp
-  read_ip -quiet C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc
 OPTRACE "read constraints: implementation" END { }
