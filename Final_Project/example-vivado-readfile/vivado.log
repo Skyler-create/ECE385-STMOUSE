@@ -2,149 +2,431 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Apr 17 18:50:18 2025
-# Process ID: 132380
-# Current directory: C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37320 C:\Users\admin\OneDrive\Desktop\STMOUSE-385\ECE385-STMOUSE\Final_Project\example-vivado-readfile\Nexys4-ReadFile.xpr
-# Log file: C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/vivado.log
-# Journal file: C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile\vivado.jou
-# Running On: DESKTOP-808U3NO, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 4, Host memory: 34074 MB
+# Start of session at: Thu Apr 17 20:47:11 2025
+# Process ID: 31048
+# Current directory: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20932 C:\Users\timhs\OneDrive\Documents\Vivado\Final_Project\example-vivado-readfile\Nexys4-ReadFile.xpr
+# Log file: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/vivado.log
+# Journal file: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile\vivado.jou
+# Running On: Tims-Laptop, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 4, Host memory: 16913 MB
 #-----------------------------------------------------------
 start_gui
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Users/admin/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
-INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-open_project -part xc7s50csga324-1 C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/Nexys4-ReadFile.xpr
-INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile'
-INFO: [Project 1-313] Project file moved from 'D:/FPGAopensource/FPGA-SDcard-Reader/example-vivado-readfile' since last save.
-INFO: [Project 1-563] Overriding project part, 'xc7a100tcsg324-1', with new part: 'xc7s50csga324-1'.
-WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/Nexys4-ReadFile.ip_user_files'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/RTL/sd_file_reader.v', nor could it be found using path 'D:/FPGAopensource/FPGA-SDcard-Reader/RTL/sd_file_reader.v'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/RTL/sd_reader.v', nor could it be found using path 'D:/FPGAopensource/FPGA-SDcard-Reader/RTL/sd_reader.v'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/RTL/sdcmd_ctrl.v', nor could it be found using path 'D:/FPGAopensource/FPGA-SDcard-Reader/RTL/sdcmd_ctrl.v'.
+open_project C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile' since last save.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.ip_user_files'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_file_reader.v', nor could it be found using path 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/RTL/sd_file_reader.v'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_reader.v', nor could it be found using path 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/RTL/sd_reader.v'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sdcmd_ctrl.v', nor could it be found using path 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/RTL/sdcmd_ctrl.v'.
 Scanning sources...
 Finished scanning sources
-INFO: [Project 1-573] Overriding 'synth_1' run's part, 'xc7a100tcsg324-1', with new part: 'xc7s50csga324-1'.
-WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
-INFO: [Project 1-573] Overriding 'clk_wiz_0_synth_1' run's part, 'xc7a100tcsg324-1', with new part: 'xc7s50csga324-1'.
-WARNING: [Project 1-509] GeneratedRun file for 'clk_wiz_0_synth_1' not found
-INFO: [Project 1-573] Overriding 'impl_1' run's part, 'xc7a100tcsg324-1', with new part: 'xc7s50csga324-1'.
-WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
-INFO: [Project 1-573] Overriding 'clk_wiz_0_impl_1' run's part, 'xc7a100tcsg324-1', with new part: 'xc7s50csga324-1'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/admin/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'clk_wiz_0' generated file not found 'c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'clk_wiz_0' generated file not found 'c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl'. Please regenerate to continue.
 WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
 * IP definition 'Clocking Wizard (6.0)' for IP 'clk_wiz_0' (customized with software release 2019.1) has a different revision in the IP Catalog. * Current project part 'xc7s50csga324-1' and the part 'xc7a100tcsg324-1' used to customize the IP 'clk_wiz_0' do not match.
-upgrade_project -migrate_output_products
+open_project: Time (s): cpu = 00:01:27 ; elapsed = 00:00:40 . Memory (MB): peak = 1119.883 ; gain = 283.352
 update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 8
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 17 21:17:26 2025...
+is target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci
+
 WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci
+C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci
 
-WARNING: [Project 1-576] IP 'C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci' in run clk_wiz_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
+WARNING: [Project 1-576] IP 'C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci' in run clk_wiz_0_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
 Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
-[Thu Apr 17 18:51:36 2025] Launched clk_wiz_0_synth_1...
-Run output will be captured here: C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/clk_wiz_0_synth_1/runme.log
-[Thu Apr 17 18:51:36 2025] Launched synth_1...
-Run output will be captured here: C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+[Thu Apr 17 20:49:20 2025] Launched clk_wiz_0_synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/clk_wiz_0_synth_1/runme.log
+[Thu Apr 17 20:49:20 2025] Launched synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+import_files -norecurse {C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/SDCard_Example/FPGA-SDcard-Reader-main/RTL/sd_file_reader.v C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/SDCard_Example/FPGA-SDcard-Reader-main/RTL/sdcmd_ctrl.v C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/SDCard_Example/FPGA-SDcard-Reader-main/RTL/sd_reader.v}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_file_reader.v] -no_script -reset -force -quiet
+remove_files  C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_file_reader.v
+export_ip_user_files -of_objects  [get_files C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_reader.v] -no_script -reset -force -quiet
+remove_files  C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_reader.v
+export_ip_user_files -of_objects  [get_files C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sdcmd_ctrl.v] -no_script -reset -force -quiet
+remove_files  C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sdcmd_ctrl.v
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1
+
+launch_runs impl_1 -jobs 8
+[Thu Apr 17 20:53:15 2025] Launched synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+[Thu Apr 17 20:53:15 2025] Launched impl_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1
+
+launch_runs impl_1 -jobs 8
+[Thu Apr 17 20:59:25 2025] Launched synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+[Thu Apr 17 20:59:25 2025] Launched impl_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1
+
+WARNING: [Vivado 12-4144] IP run clk_wiz_0_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7s50csga324-1
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xci
+
+Top: fpga_top
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1897.633 ; gain = 395.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fpga_top' [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/fpga_top.v:11]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/.Xil/Vivado-31048-Tims-Laptop/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/.Xil/Vivado-31048-Tims-Laptop/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'sd_file_reader' [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:12]
+	Parameter FILE_NAME_LEN bound to: 11 - type: integer 
+	Parameter FILE_NAME bound to: example.txt - type: string 
+	Parameter CLK_DIV bound to: 3'b010 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:202]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:306]
+INFO: [Synth 8-6157] synthesizing module 'sd_reader' [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_reader.v:10]
+	Parameter CLK_DIV bound to: 3'b010 
+	Parameter SIMULATE bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sdcmd_ctrl' [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sdcmd_ctrl.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'sdcmd_ctrl' (0#1) [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sdcmd_ctrl.v:10]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_reader.v:154]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_reader.v:227]
+INFO: [Synth 8-6155] done synthesizing module 'sd_reader' (0#1) [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_reader.v:10]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:429]
+INFO: [Synth 8-6155] done synthesizing module 'sd_file_reader' (0#1) [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:12]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:10]
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter PARITY bound to: NONE - type: string 
+	Parameter STOP_BITS bound to: 4 - type: integer 
+	Parameter BYTE_WIDTH bound to: 1 - type: integer 
+	Parameter FIFO_EA bound to: 14 - type: integer 
+	Parameter EXTRA_BYTE_AFTER_TRANSFER bound to: (null) - type: string 
+	Parameter EXTRA_BYTE_AFTER_PACKET bound to: (null) - type: string 
+INFO: [Synth 8-251] uart_tx :           parity = NONE [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:286]
+INFO: [Synth 8-251] uart_tx :     clock period = 20.0000000f ns   (5000000010d Hz) [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:287]
+INFO: [Synth 8-251] uart_tx : baud rate period = 8680.5555560f ns   (11520010d Hz) [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:288]
+INFO: [Synth 8-251] uart_tx :      baud cycles = 43410d [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:289]
+INFO: [Synth 8-251] uart_tx : baud cycles frac = 010d [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:290]
+INFO: [Synth 8-251] uart_tx :             __      ____ ____ ____ ____ ____ ____ ____ _______  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:299]
+INFO: [Synth 8-251] uart_tx :        wave   \____/____X____X____X____X____X____X____X____/    [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:300]
+INFO: [Synth 8-251] uart_tx :        bits   | S  | B0 | B1 | B2 | B3 | B4 | B5 | B6 | B7 |    [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:301]
+INFO: [Synth 8-251] uart_tx : time_points  t0   t1   t2   t3   t4   t5   t6   t7   t8   t9    [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:302]
+INFO: [Synth 8-251] uart_tx : [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:303]
+INFO: [Synth 8-251] uart_tx : t12d- t0 = 8680.5555560f ns (ideal)  8680.0000000f ns (actual).   error=0.5555560f ns   relative_error=0.0064003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-251] uart_tx : t22d- t0 = 17361.1111110f ns (ideal)  17360.0000000f ns (actual).   error=1.1111110f ns   relative_error=0.0128003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-251] uart_tx : t32d- t0 = 26041.6666670f ns (ideal)  26040.0000000f ns (actual).   error=1.6666670f ns   relative_error=0.0192003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-251] uart_tx : t42d- t0 = 34722.2222220f ns (ideal)  34720.0000000f ns (actual).   error=2.2222220f ns   relative_error=0.0256003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-251] uart_tx : t52d- t0 = 43402.7777780f ns (ideal)  43400.0000000f ns (actual).   error=2.7777780f ns   relative_error=0.0320003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-251] uart_tx : t62d- t0 = 52083.3333330f ns (ideal)  52080.0000000f ns (actual).   error=3.3333330f ns   relative_error=0.0384003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-251] uart_tx : t72d- t0 = 60763.8888890f ns (ideal)  60760.0000000f ns (actual).   error=3.8888890f ns   relative_error=0.0448003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-251] uart_tx : t82d- t0 = 69444.4444440f ns (ideal)  69440.0000000f ns (actual).   error=4.4444440f ns   relative_error=0.0512003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-251] uart_tx : t92d- t0 = 78125.0000000f ns (ideal)  78120.0000000f ns (actual).   error=5.0000000f ns   relative_error=0.0576003f%% [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:326]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/uart_tx.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'fpga_top' (0#1) [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/RTL/fpga_top.v:11]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[1] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[2] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[3] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[4] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[5] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[6] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[7] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[8] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[9] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[10] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[19] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[20] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[21] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[24] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[25] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[26] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[27] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[28] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[29] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[30] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[31] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[32] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[33] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[34] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[35] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[40] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[41] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[42] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[43] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[48] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[49] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[50] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[51] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[52] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[53] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[54] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[55] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[56] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[57] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[58] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[59] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[60] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[61] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[62] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[63] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[64] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[65] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[66] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[67] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[68] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[69] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[70] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[71] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[72] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[73] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[74] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[75] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[76] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[77] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[78] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[79] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[80] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[81] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[82] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[83] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[84] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[85] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[87] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[88] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[89] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[90] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[91] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[92] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[93] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[94] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[95] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[96] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[97] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[98] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[99] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[100] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[101] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[102] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[103] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[104] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[105] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[106] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[107] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[108] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[109] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[110] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[111] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[112] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[113] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[114] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[115] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[116] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[117] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[118] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sector_content_reg[119] was removed.  [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.srcs/sources_1/imports/RTL/sd_file_reader.v:138]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3917] design fpga_top has port sdcard_pwr_n driven by constant 0
+WARNING: [Synth 8-3917] design fpga_top has port sddat1 driven by constant 1
+WARNING: [Synth 8-3917] design fpga_top has port sddat2 driven by constant 1
+WARNING: [Synth 8-3917] design fpga_top has port sddat3 driven by constant 1
+WARNING: [Synth 8-3917] design fpga_top has port led[15] driven by constant 0
+WARNING: [Synth 8-3917] design fpga_top has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design fpga_top has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design fpga_top has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design fpga_top has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design fpga_top has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design fpga_top has port led[9] driven by constant 0
+WARNING: [Synth 8-7129] Port i_tlast in module uart_tx is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2029.078 ; gain = 527.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2034.398 ; gain = 532.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2034.398 ; gain = 532.320
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.dcp' for cell 'u_clk_wiz_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2056.004 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_wiz_0/inst'
+Parsing XDC File [c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/IP/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fpga_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fpga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc]
+WARNING: [Vivado 12-584] No ports matched 'i_top_clk'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'i_top_clk'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'i_top_clk'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:8]
+CRITICAL WARNING: [Common 17-69] Command failed: 'D4' is not a valid site or package pin name. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'o_top_cam_done'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'sd_cd'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'sd_cd'. [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc:43]
+Finished Parsing XDC File [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys-4-DDR-pins.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/fpga_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2156.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 2157.301 ; gain = 655.223
+47 Infos, 136 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2157.301 ; gain = 1004.984
+launch_runs impl_1 -jobs 8
+[Thu Apr 17 21:02:42 2025] Launched synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+[Thu Apr 17 21:02:42 2025] Launched impl_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr 17 21:06:14 2025] Launched impl_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr 17 21:14:21 2025] Launched synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+[Thu Apr 17 21:14:21 2025] Launched impl_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr 17 21:19:32 2025] Launched synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+[Thu Apr 17 21:19:32 2025] Launched impl_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr 17 21:26:06 2025] Launched synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+[Thu Apr 17 21:26:06 2025] Launched impl_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr 17 21:33:19 2025] Launched synth_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/synth_1/runme.log
+[Thu Apr 17 21:33:19 2025] Launched impl_1...
+Run output will be captured here: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.runs/impl_1/runme.log

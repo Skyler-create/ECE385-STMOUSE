@@ -2,17 +2,50 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Apr 17 18:50:18 2025
-# Process ID: 132380
-# Current directory: C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37320 C:\Users\admin\OneDrive\Desktop\STMOUSE-385\ECE385-STMOUSE\Final_Project\example-vivado-readfile\Nexys4-ReadFile.xpr
-# Log file: C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/vivado.log
-# Journal file: C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile\vivado.jou
-# Running On: DESKTOP-808U3NO, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 4, Host memory: 34074 MB
+# Start of session at: Thu Apr 17 20:47:11 2025
+# Process ID: 31048
+# Current directory: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20932 C:\Users\timhs\OneDrive\Documents\Vivado\Final_Project\example-vivado-readfile\Nexys4-ReadFile.xpr
+# Log file: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/vivado.log
+# Journal file: C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile\vivado.jou
+# Running On: Tims-Laptop, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 4, Host memory: 16913 MB
 #-----------------------------------------------------------
 start_gui
-open_project -part xc7s50csga324-1 C:/Users/admin/OneDrive/Desktop/STMOUSE-385/ECE385-STMOUSE/Final_Project/example-vivado-readfile/Nexys4-ReadFile.xpr
-upgrade_project -migrate_output_products
+open_project C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/example-vivado-readfile/Nexys4-ReadFile.xpr
 update_compile_order -fileset sources_1
+reset_run clk_wiz_0_synth_1
+reset_run synth_1
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
+import_files -norecurse {C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/SDCard_Example/FPGA-SDcard-Reader-main/RTL/sd_file_reader.v C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/SDCard_Example/FPGA-SDcard-Reader-main/RTL/sdcmd_ctrl.v C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/SDCard_Example/FPGA-SDcard-Reader-main/RTL/sd_reader.v}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_file_reader.v] -no_script -reset -force -quiet
+remove_files  C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_file_reader.v
+export_ip_user_files -of_objects  [get_files C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_reader.v] -no_script -reset -force -quiet
+remove_files  C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sd_reader.v
+export_ip_user_files -of_objects  [get_files C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sdcmd_ctrl.v] -no_script -reset -force -quiet
+remove_files  C:/Users/timhs/OneDrive/Documents/Vivado/Final_Project/RTL/sdcmd_ctrl.v
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
