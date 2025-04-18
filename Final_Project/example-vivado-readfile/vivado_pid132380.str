@@ -222,3 +222,4 @@ closeMainWindow("Nexys4-ReadFile - [C:/Users/admin/OneDrive/Desktop/STMOUSE-385/
 // WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3085 ms. Increasing delay to 3000 ms.
 // HMemoryUtils.trashcanNow. Engine heap size: 894 MB. GUI used memory: 68 MB. Current time: 4/17/25, 8:21:31 PM CDT
 // TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 894 MB. GUI used memory: 68 MB. Current time: 4/17/25, 8:51:34 PM CDT
