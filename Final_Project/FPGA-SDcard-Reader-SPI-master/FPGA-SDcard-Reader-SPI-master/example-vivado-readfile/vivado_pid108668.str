@@ -553,3 +553,100 @@ selectButton("OptionPane.button", "Yes"); // JButton
 // CommandFailedException: ERROR: [Common 17-69] Command failed:  
 // 'dD' command handler elapsed time: 9 seconds
 dismissDialog("Open Implemented Design"); // bq
+// WARNING: HEventQueue.dispatchEvent() is taking  1876 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  34126798 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2316 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  14206 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 947 MB. GUI used memory: 76 MB. Current time: 4/18/25, 11:59:26 AM CDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1183 ms. Increasing delay to 3549 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1104 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1862 ms. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3933 ms. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  11976 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 85 MB. Current time: 4/18/25, 12:29:12 PM CDT
+// Elapsed time: 37738 seconds
+selectCodeEditor("Nexys-4-DDR-pins.xdc", 667, 206); // ac
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset", true); // d.c
+// Elapsed time: 75 seconds
+selectCodeEditor("Nexys-4-DDR-pins.xdc", 613, 246); // ac
+selectCodeEditor("Nexys-4-DDR-pins.xdc", 757, 284); // ac
+selectCodeEditor("Nexys-4-DDR-pins.xdc", 756, 284); // ac
+selectCodeEditor("Nexys-4-DDR-pins.xdc", 752, 282); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 85 MB. Current time: 4/18/25, 12:59:15 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 85 MB. Current time: 4/18/25, 1:29:17 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 85 MB. Current time: 4/18/25, 1:59:20 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1093 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1285283 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2560 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2978 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1971 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 74 MB. Current time: 4/18/25, 2:38:22 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 75 MB. Current time: 4/18/25, 3:08:22 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  59594 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  51068124 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2488 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  5323 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 74 MB. Current time: 4/19/25, 5:37:44 AM CDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2314 ms. Increasing delay to 6942 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1080 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 6982 ms. Increasing delay to 6000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  5555 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  23714763 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4484 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2116 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 75 MB. Current time: 4/19/25, 12:13:34 PM CDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5309 ms. Increasing delay to 15927 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 12742 ms. Increasing delay to 7000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4326 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1086 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1210 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 93 ms. Decreasing delay to 2093 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5651 ms. Increasing delay to 16953 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 15 ms. Decreasing delay to 2015 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2465 ms.
+// [GUI Memory]: 163 MB (+6186kb) [35:18:48]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1186 ms. Increasing delay to 3558 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 22643 ms. Increasing delay to 8000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 84 MB. Current time: 4/19/25, 12:43:28 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 85 MB. Current time: 4/19/25, 1:13:31 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2729 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2990 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 10440 ms. Increasing delay to 9000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6675 ms. Increasing delay to 20025 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4 ms. Decreasing delay to 2004 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5802 ms. Increasing delay to 17406 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 7 ms. Decreasing delay to 2007 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1138 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 84 MB. Current time: 4/19/25, 1:43:32 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1411 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1162 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2103 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 17078 ms. Increasing delay to 51234 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 9514 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 6904 ms. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 12 ms. Decreasing delay to 2012 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1195 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  22716 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1974 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 84 MB. Current time: 4/19/25, 2:13:36 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 84 MB. Current time: 4/19/25, 2:43:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 84 MB. Current time: 4/19/25, 3:13:42 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1808 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 74 MB. Current time: 4/19/25, 3:43:44 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  3785 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1413 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1464 ms. Increasing delay to 4392 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 84 MB. Current time: 4/19/25, 4:13:45 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 83 MB. Current time: 4/19/25, 4:43:45 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 83 MB. Current time: 4/19/25, 5:13:46 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 84 MB. Current time: 4/19/25, 5:43:46 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 83 MB. Current time: 4/19/25, 6:13:46 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 83 MB. Current time: 4/19/25, 6:43:47 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2660467 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 84 MB. Current time: 4/19/25, 7:57:27 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  6062 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1656 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3818 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5011 ms. Increasing delay to 15033 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1043 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 88 ms. Decreasing delay to 2088 ms.
